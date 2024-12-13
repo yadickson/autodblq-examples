@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.yadickson</groupId>
+    <artifactId>autodblq-examples</artifactId>
+    <version>1.0.0</version>
+    <name>Maven Auto Database to Liquibase Generator from Plugin</name>
+    <description>Maven plugin to generate xml liquibase files from database</description>
+    <url>https://github.com/yadickson/autodblq-examples</url>
+
+    <licenses>
+        <license>
+            <name>GPL-3.0</name>
+            <url>https://opensource.org/licenses/GPL-3.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/yadickson/autodblq-examples</url>
+        <connection>scm:git:git://github.com/yadickson/autodblq-examples.git</connection>
+        <developerConnection>scm:git:git@github.com:yadickson/autodblq-examples.git</developerConnection>
+    </scm>
+    
+    <developers>
+        <developer>
+            <id>yadickson</id>
+            <name>Yadickson Soto</name>
+            <email>yadickson@gmail.com</email>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>Yadickson Soto</name>
+        <url>https://github.com/yadickson/autodblq-examples</url>
+    </organization>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>com.github.yadickson</groupId>
+                <artifactId>autodblq</artifactId>
+                <version>2.0.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generator</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://...:.../...</url>
+                    <username>...</username>
+                    <password>...</password>
+                    <author>yadickson.soto</author>
+                    <version>1.0.0</version>
+                    <outputDirectory>.</outputDirectory>
+                    <addDbms>true</addDbms>
+                    <addNullable>true</addNullable>
+                    <addIdentity>true</addIdentity>
+                    <keepTypes>true</keepTypes>
+                    <keepNames>true</keepNames>
+                    <types>
+                        <param>is_fraud</param>
+                        <param>t_accounting_entry_type</param>
+                        <param>t_alert_state</param>
+                        <param>t_custom_field_resource</param>
+                        <param>t_custom_field_type</param>
+                        <param>t_entity_status</param>
+                        <param>t_entity_type</param>
+                        <param>t_execution_status</param>
+                        <param>t_execution_type</param>
+                        <param>t_gender</param>
+                        <param>t_instrument_status</param>
+                        <param>t_model_category</param>
+                        <param>t_resource_context</param>
+                        <param>t_rule_version_stage</param>
+                        <param>t_rule_version_status</param>
+                        <param>t_simulation_status</param>
+                    </types>
+                    <tables>
+                        <param>actions</param>
+                        <param>alerts</param>
+                        <param>alerts_simulation</param>
+                        <param>audits</param>
+                        <param>client_configs</param>
+                        <param>custom_fields</param>
+                        <param>document_types</param>
+                        <param>documents</param>
+                        <param>entities</param>
+                        <param>execution_rules</param>
+                        <param>executions</param>
+                        <param>exploded_transactions</param>
+                        <param>exploded_transactions_historic</param>
+                        <param>flagging_value_categories</param>
+                        <param>flagging_values</param>
+                        <param>instruments</param>
+                        <param>investigation_checklist</param>
+                        <param>investigation_checklist_group</param>
+                        <param>investigation_checklist_item</param>
+                        <param>models</param>
+                        <param>product_statistics</param>
+                        <param>rule_spec_executions</param>
+                        <param>rule_spec_simulations</param>
+                        <param>rule_specs</param>
+                        <param>rule_versions</param>
+                        <param>rules</param>
+                        <param>schemaversions</param>
+                        <param>transactions</param>
+                        <param>transactions_statistics</param>
+                    </tables>
+                    <views>
+                        <param>alerts_search</param>
+                        <param>get_rule_published</param>
+                        <param>rule_search</param>
+                    </views>
+                    <dataTables>
+                        <param>models</param>
+                        <param>custom_fields</param>
+                        <param>entities</param>
+                        <param>instruments</param>
+                    </dataTables>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>42.7.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
