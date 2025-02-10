@@ -304,4 +304,22 @@
 
     </changeSet>
 
+    <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0018"/>
+
+        <addDefaultValue
+            tableName="schemaversions"
+            columnName="schemaversionsid"
+            defaultValueNumeric="nextval('schemaversions_schemaversionsid_seq'::regclass)"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="schemaversions"
+                columnName="schemaversionsid"
+            />
+        </rollback>
+
+    </changeSet>
+
 </databaseChangeLog>
