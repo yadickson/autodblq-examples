@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0002"/>
+
+        <createTable tableName="MAE_EMPLEADO" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMP_K_RUTEMPLEAD" type="number(12)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMP_A_DIGVERRUT" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_APELLPATER" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_APELLMATER" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_NOMBRE" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECHANACIM" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_ESTADCIVIL" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_NACIONALID" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_SITUACMILI" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_SEXO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_DOMICILIO" type="varchar2(50)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_COMUNA" type="varchar2(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CIUDAD" type="varchar2(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_FONO" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_ESTUDIO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_FONOAVIEME" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_G_AVISEMERG" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_PROFESION" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_TITULO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_ESPECIALIDAD1" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_ESPECIALIDAD2" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPCONTRAT" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_EXPERLABOR" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_INICICONTR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_TERMICONTR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOJORNAD" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOHORARI" type="varchar2(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CODIGOPAGO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_NUMCTACTE" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CODBANCO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDICBIENE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDAFISIND" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDTARJETA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDHOREXT" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CODESTADO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_K_CODIGCARGO" type="number(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_K_CODUNIDAD" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CARGOINE" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_SUCURSAL" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_OFICINA" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDANTQUIN" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_SUELDOBASE" type="number(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_RTABRUTA" type="number(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_INSTPREV" type="varchar2(25)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_AFILPREV" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOAHOVOL" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MTOAHOVOL" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOCOTVOL" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MTOCOTVOL" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_INSTSALUD" type="varchar2(25)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_AFILSALUD" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_COTIZSALUD" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_VALPACSAL" type="number(11)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDCOTADIC" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_DIASFERNEG" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_INDEMNIZAB" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_SITCONTRAC" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_EMITECONTR" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMPL_CODG" type="number(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_COD_OFIBANCO" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDTITULO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_PORCANT" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_TOPEPORADI" type="number(7)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TRA_N_CODTRAMO" type="number(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="MAE_N_ANORECVAC" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_AFPEEPP" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_P_FOTO" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDMTOPORC" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDSEGURO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MESING" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_ANOING" type="number(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_ORDSUE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_RUTEMPSUP" type="number(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_GRUPOSANG" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDPLANCOL" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DRE_ESCALA" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DRE_TRAMO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_CONTANTERIOR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_INDGRATIF" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MTOPORGR" type="number(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_MONEDAPAGO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RBR_N_BRUTA" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RBR_N_LIQUIDA" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CAJAPREV" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDJUBIL" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPODEPO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MTODEPO" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CAJACOMP" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_OFIPAGO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_ALCANLIQUI" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_DESNOEFE" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_DIFLIQUIDO" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_CORRELLIQ" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_SENCE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_NUMIMM" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_DEPTO" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_DIASCOMP" type="number(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_INDREBVAC" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PTT_C_CODIGO" type="varchar2(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="GRT_K_CORREL" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ASI_F_FECHAINI" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ASI_F_FECHATER" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_CALCULOVAC" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_SALDOVAC" type="number(7)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_DEVENVAC" type="number(7)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MTOREANT" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_F_BIENESTAR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_GRUPOSAN" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_DADOR" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_CARGASFAM" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_CASTIGO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_FICHADENTAL" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_COLECTIVO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="USOBIENESTAR" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_F_CASTIGO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_A_CASTIGO" type="varchar2(80)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_F_TERMCASTIGO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_BIENESTAR" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_COLECTIVOSAL" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="BIE_C_CONVENIO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_DIGCODIGO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_ANOSREC" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_PROYEAREA" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_LINEAPROD" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="MAE_C_EMAIL" type="varchar2(50)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_INDCAP" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_TXTPLA" type="varchar2(200)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_TXTMEJ" type="varchar2(200)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CIA_K_EMPRESA1" type="number(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CANASTA" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CIUCAN" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_COMCAN" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_PASSWEB" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_FONOANEXO" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_CAMBIOCONTR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_HUELLA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_GRUPORELOJ" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_POSLOCAL" type="varchar2(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_VALPACSALHS" type="number(11)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_ADICAUGE" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_ULTCAMBCARGO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_ULTCAMBDEPTO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_ULTCAMBJORNADA" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECHADIGI" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_MOTIVOCONTR" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="USUARIO_MODFNT" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_F_FECPROCESO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_CCUIT" type="number(2)" remarks="Argentina - Prefijo del CUIL (CUIL se compone de CCUIT-Rut-DV)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPODOCU" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_NUMDOCU" type="varchar2(20)" remarks="Numero documento identificacion">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_UNIVERSIDAD" type="varchar2(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ESTA_DORE" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_BIENIO" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="COR_K_CODIGO" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECTERAHOVOL" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECTERCOTVOL" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECTERDEPCON" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_VERPAG" type="number(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_VERLIQ" type="number(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_PROXCIERRE" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_NUMTARJ" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_DIGFICHA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_REQUERIMIENTO" type="varchar2(30)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_FONOANEX" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_RUTEMPLEAD" type="varchar2(25)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_K_TIPDOCEMP" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPINST_3" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECINICIO_3" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPCON_3" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPMON_3" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MONTCALOR_3" type="number(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPINST_4" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECINICIO_4" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPCON_4" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPMON_4" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MONTCALOR_4" type="number(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPCON_5" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPMON_5" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MONTCALOR_5" type="number(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPCON_6" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPMON_6" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_MONTCALOR_6" type="number(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPINST_5" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECINICIO_5" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_IDTIPINST_6" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECINICIO_6" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOCOTOBL" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOMONEDA" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="IBE_K_RUTINSTTER_5" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="IBE_K_RUTINSTTER_6" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="IBE_K_RUTINSTTER_3" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="IBE_K_RUTINSTTER_4" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="MAE_FECINICIOSEGU" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CON_K_CODIGO" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CON_C_INDBASE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RES_N_NUMERO" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CODI_RAMO" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_DIASCONV" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_ADMIPEND" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_OBSERVACION" type="varchar2(2000)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CODI_DORE" type="varchar2(30)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_FECREAFIN" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_A_REDBAN" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="MOR_K_CODCOM" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_EXCEPHORARI" type="varchar2(5)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_JORNFLEXIBLE" type="varchar2(10)" remarks="Jornada Flexible para el trabajador.">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_GRUPOSANG_2" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_NLEGAJO" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_EXPEDICION" type="varchar2(3)" remarks="Lugar de expedición">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_ULTCAMBSUCURSAL" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_ULTCAMBEXHORARIA" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_EVAL360" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_RUTJEFE_EVAL" type="number(12)" remarks="Jefe directo de la evaluación">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_RUTJEFE_CORP" type="number(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_RUTJEFE_DIRECTO" type="number(12)" remarks="Jefe directo">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_K_RUTJEFE_REEMPL" type="number(12)" remarks="Jefe reemplazante (para WFV)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPODOCUADIC" type="varchar2(3)" remarks="Tipo de documento Adicional">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_NUMDOCUADIC" type="varchar2(20)" remarks="Numero documento identificacion Adicional">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_DVNUMDOC" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CUSSP" type="varchar2(12)" remarks="Código único de salud previsión">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_CODPAFONO" type="number(3)" remarks="Código país teléfono">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CODCIFONO" type="varchar2(3)" remarks="Código ciudad teléfono">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_CODPACELU" type="number(3)" remarks="Código país celular">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_C_CODCICELU" type="varchar2(3)" remarks="Código celular">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_CELULAR" type="number(10)" remarks="teléfono celular">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_N_SECTARJPOS" type="number(3)" remarks="Secuencial tarjeta POS entregada">
+                <constraints nullable="true"/>
+            </column>
+            <column name="MAE_C_MAILPERSONAL" type="varchar2(50)" remarks="Correo personal colaborador">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_DESDEDOC" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="EMP_F_HASTADOC" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_EMPLEADO"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0003"/>
+
+        <createTable tableName="MAE_GRCARACT" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP_K_TIPOCARACT" type="number(5)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMP_K_RUTEMPLEAD" type="number(12)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DEF_K_CODCARACT" type="number(5)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DEF_C_CODCARACT" type="varchar2(80)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DEF_F_FECHCAR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DEF_N_NUMCAR" type="number(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DEF_F_FECHTER" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="DEF_N_MTOREANT" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CON_K_CODIGO" type="number(9)" remarks="código de contrato">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_GRCARACT"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0004"/>
+
+        <createTable tableName="MAE_CARGOS" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CAR_K_CODIGCARGO" type="number(4)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CAR_A_NOMBCARGO" type="varchar2(40)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_F_FECVIGCAR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_F_FECELICAR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPOJORNAD" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_NIVELCARGO" type="number(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CODIGOINE" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_C_SUPERIOR" type="number(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_F_ACTUALIZAC" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RENTAPROME" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RENTAMAXIM" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RENTAMINIM" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RTAPRICUAR" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RTATERCUAR" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RENTAMODA" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_RTAMEDIANA" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_DESVIESTAN" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_NUMEMPLEAD" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_TIPCONTRAT" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_A_DESCRIPCION" type="varchar2(2000)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_K_CODUNIDAD" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_A_NOMBCORT" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_C_CODIGCARGO" type="varchar2(24)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CODIGOSENCE" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_C_CLASIFICACION" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_C_ENCASILLA" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CAR_N_CODCUBO" type="number(4)" remarks="Codigo cargo utilizado para el envio de informacion al Cubo RRHH.">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_CARGOS"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0005"/>
+
+        <createTable tableName="MAE_CARACT" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP_K_TIPOCARACT" type="number(5)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP_C_DESCARACT" type="varchar2(1500)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP_C_NATURALEZA" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_POBLAMIENTO" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_VALIDACION" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_N_VALDEF" type="number(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_TIPODATO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_N_VALOR" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_INDICE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_SELE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_REMU" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_EVAL" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_FICHA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_AYUDA" type="varchar2(1000)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_HIST" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_CAPA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_BIEN" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_ASIS" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_PERS" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_ELIMCAR" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="TIP_C_IDTIPCAR" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_CARACT"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0006"/>
+
+        <createTable tableName="MAE_UNIDADES" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UNI_K_CODUNIDAD" type="number(6)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UNI_A_NOMBUNIDAD" type="varchar2(80)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UNI_C_CODUNISUP" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_F_CREACION" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_UBICFISICA" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_F_ELIMUNIDAD" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_EXENTRIBUT" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_G_CODMUTUAL" type="varchar2(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_CIUDAD" type="varchar2(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_A_NOMBCORT" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_C_CODUNIDAD" type="varchar2(24)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_N_RESPONSAB" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_C_CODAREA" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="UNI_C_CODGERENCIA" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_UNIDADES"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0007"/>
+
+        <createTable tableName="MAE_VALCARAC" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP_K_TIPOCARACT" type="number(5)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VAL_K_CODCARACT" type="number(5)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VAL_A_DESCARACT" type="varchar2(400)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VAL_C_CODCARACT" type="varchar2(15)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VAL_F_INICARACT" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="VAL_F_TERCARACT" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_VALCARAC"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0008"/>
+
+        <createTable tableName="MAE_RETRETIROS" remarks="">
+            <column name="CIA_K_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMP_K_RUTEMPLEAD" type="number(12)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RET_F_INICICONTR" type="date" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RET_F_TERMICONTR" type="date" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SYS_C_CAUSAFINIQ" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_C_CODAVISO" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_DIASFERIAD" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MTOINDFERI" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_FERPROPOR" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MTOFERPROP" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_ANOSSERVIC" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MTOANOSERV" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MTODESAHUC" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MESEINDEVO" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MTOINDVOLU" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_COTPENSION" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_COTSALUD" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_IMPUESTO" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_IPCACUMULA" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_TOTALHABER" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_TOTDESCEFE" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_TOTDESCNOE" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_LIQUIAPAGA" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_A_STATUSFINI" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_F_PERIODPROC" type="date" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LIQ_C_INSTSALUD" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_INSTPAGP" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_TOTAHAIMPO" type="number(9)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_COTSALUD" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_COTPENSION" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_IMPUESTO" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_COMISION" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_MTOHRETRA" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_MTOHREXTRA" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LIQ_N_BASEIMPONI" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_RTAPROM" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_BASEIMPUE" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="RET_N_MESESPROM" type="number(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FAL_A_CONTRATABLE" type="varchar2(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FAL_C_CAUSAFINIQ" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FAL_C_COMENTARIO" type="varchar2(100)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FAL_A_USUARIOING" type="varchar2(35)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FAL_A_USUARIOUPD" type="varchar2(35)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_OFICINA" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FINI_ENTREGADO" type="number" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FCH_FINI_ENTREGA" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FINI_COMENTARIO" type="varchar2(100)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="FINI_USUER" type="varchar2(200)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_RETRETIROS"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0009"/>
+
+        <createTable tableName="MAE_PERSONAS_FALABELLA" remarks="">
+            <column name="PER_C_RUTPERSONA" type="number(12)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PER_A_DIGVERRUT" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_A_APELLPATER" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_A_APELLMATER" type="varchar2(15)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_A_NOMBRE" type="varchar2(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_ORIGEN" type="varchar2(3)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SPR_C_EMPRESA" type="number(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_CODESTADO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_A_CONTRATABLE" type="varchar2(2)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_ROLEMPLEADO" type="number(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_F_FECHANACIM" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_PASSWEB" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_CODCARGO" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_OFICINA" type="varchar2(10)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_PERFILPOS" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_CENTROCOSTO" type="number(6)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SPR_C_HUELLA" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_GRUPORELOJ" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_POSLOCAL" type="varchar2(8)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_C_POSUPDATE" type="varchar2(1)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_F_PASSUPDATE" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_A_USERUPDATE" type="varchar2(30)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_DEPTO" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_F_INICICONTR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_F_TERMICONTR" type="date" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_SITCONTRAC" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_RUTEMPSUP" type="varchar2(12)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_CODPAIS" type="varchar2(2)" remarks="Portal - Codigo Pais">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_TIPODOCU" type="varchar2(2)" remarks="Portal - Tipo Documento">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_NUMDOCU" type="varchar2(20)" remarks="Portal - Numero documento">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_NUMDV" type="varchar2(2)" remarks="Portal - DV del Documento (si tiene)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_NUMUSER" type="number(12)" remarks="Portal - Numero interno para la persona, secuencial">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_INDTARJETA" type="varchar2(1)" remarks="Indicador de si marca o no asstencia (N= No marca,S=Si marca)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_INDACTFEC" type="varchar2(1)" remarks="Indicador actualizacion de fechas, para el proceso Falanet (N=No Actualiza, S= Si Actualiza)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_INDUSOPOS" type="varchar2(1)" remarks="Indicador de Uso a POS segun Turno programado (S=Si, N=No)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="SYS_F_FECPROCESO" type="date" remarks="Fecha actualización o insercion registro">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_EMAIL" type="varchar2(50)" remarks="Mail de la persona">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_ASISPROC" type="varchar2(1)" remarks="Indicador que persona debe ser procesada en sistema de Asistencia">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_INDUSOPOSMARSAL" type="varchar2(1)" remarks="Indicador de Uso a POS segun Marca Salida (S=Habilitado Uso POS, N=No, POS Bloqueado)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_SUCURSAL" type="varchar2(4)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_ESTADO" type="varchar2(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_FONO" type="varchar2(30)" remarks="Teléfonos">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_FONOANEX" type="varchar2(30)" remarks="Anexos">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_FONOCELULAR" type="varchar2(30)" remarks="Celular">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_SEXO" type="varchar2(1)" remarks="Sexo F: Femenino, M: Masculino">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_N_SECTARJPOS" type="number" remarks="Secuencial tarjeta POS entregada">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PER_C_MOTIVOCONTR" type="varchar2(3)" remarks="Motivo contrato">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="MAE_PERSONAS_FALABELLA"/>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

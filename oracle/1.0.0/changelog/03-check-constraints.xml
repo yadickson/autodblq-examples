@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0002"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_EMPLEADO ADD CONSTRAINT SYS_C005398 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_EMPLEADO DROP CONSTRAINT SYS_C005398; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0003"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_EMPLEADO ADD CONSTRAINT SYS_C005399 CHECK ("EMP_K_RUTEMPLEAD" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_EMPLEADO DROP CONSTRAINT SYS_C005399; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0004"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT ADD CONSTRAINT SYS_C005451 CHECK ("DEF_K_CODCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT DROP CONSTRAINT SYS_C005451; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0005"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT ADD CONSTRAINT SYS_C005448 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT DROP CONSTRAINT SYS_C005448; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0006"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT ADD CONSTRAINT SYS_C005449 CHECK ("TIP_K_TIPOCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT DROP CONSTRAINT SYS_C005449; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0007"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT ADD CONSTRAINT SYS_C005450 CHECK ("EMP_K_RUTEMPLEAD" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_GRCARACT DROP CONSTRAINT SYS_C005450; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0008"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_CARGOS ADD CONSTRAINT SYS_C005312 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_CARGOS DROP CONSTRAINT SYS_C005312; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0009"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_CARGOS ADD CONSTRAINT SYS_C005313 CHECK ("CAR_K_CODIGCARGO" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_CARGOS DROP CONSTRAINT SYS_C005313; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0010"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_CARACT ADD CONSTRAINT SYS_C005305 CHECK ("TIP_C_DESCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_CARACT DROP CONSTRAINT SYS_C005305; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0011"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_CARACT ADD CONSTRAINT SYS_C005303 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_CARACT DROP CONSTRAINT SYS_C005303; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0012"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_CARACT ADD CONSTRAINT SYS_C005304 CHECK ("TIP_K_TIPOCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_CARACT DROP CONSTRAINT SYS_C005304; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0013"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES ADD CONSTRAINT SYS_C005652 CHECK ("UNI_A_NOMBUNIDAD" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES DROP CONSTRAINT SYS_C005652; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0014"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES ADD CONSTRAINT SYS_C005650 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES DROP CONSTRAINT SYS_C005650; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0015"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES ADD CONSTRAINT SYS_C005651 CHECK ("UNI_K_CODUNIDAD" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_UNIDADES DROP CONSTRAINT SYS_C005651; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0016"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC ADD CONSTRAINT SYS_C005670 CHECK ("VAL_C_CODCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC DROP CONSTRAINT SYS_C005670; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0017"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC ADD CONSTRAINT SYS_C005669 CHECK ("VAL_A_DESCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC DROP CONSTRAINT SYS_C005669; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0018" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0018"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC ADD CONSTRAINT SYS_C005666 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC DROP CONSTRAINT SYS_C005666; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0019"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC ADD CONSTRAINT SYS_C005667 CHECK ("TIP_K_TIPOCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC DROP CONSTRAINT SYS_C005667; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0020" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0020"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC ADD CONSTRAINT SYS_C005668 CHECK ("VAL_K_CODCARACT" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_VALCARAC DROP CONSTRAINT SYS_C005668; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0021" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0021"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS ADD CONSTRAINT SYS_C005614 CHECK ("RET_F_PERIODPROC" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS DROP CONSTRAINT SYS_C005614; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0022" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0022"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS ADD CONSTRAINT SYS_C005613 CHECK ("RET_F_TERMICONTR" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS DROP CONSTRAINT SYS_C005613; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0023" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0023"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS ADD CONSTRAINT SYS_C005610 CHECK ("CIA_K_EMPRESA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS DROP CONSTRAINT SYS_C005610; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0024" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0024"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS ADD CONSTRAINT SYS_C005611 CHECK ("EMP_K_RUTEMPLEAD" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS DROP CONSTRAINT SYS_C005611; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0025" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0025"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS ADD CONSTRAINT SYS_C005612 CHECK ("RET_F_INICICONTR" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_RETRETIROS DROP CONSTRAINT SYS_C005612; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0026" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0026"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_PERSONAS_FALABELLA ADD CONSTRAINT SYS_C005517 CHECK ("PER_C_RUTPERSONA" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_PERSONAS_FALABELLA DROP CONSTRAINT SYS_C005517; ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0027" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-03.0027"/>
+
+        <sql>
+            <![CDATA[ ALTER TABLE MAE_PERSONAS_FALABELLA ADD CONSTRAINT SYS_C005518 CHECK ("PER_C_ORIGEN" IS NOT NULL); ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[ ALTER TABLE MAE_PERSONAS_FALABELLA DROP CONSTRAINT SYS_C005518; ]]>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

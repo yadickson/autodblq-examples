@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0002"/>
+
+        <addDefaultValue
+            tableName="custom_fields"
+            columnName="created_by"
+            defaultValueNumeric="''::character varying"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="custom_fields"
+                columnName="created_by"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0003"/>
+
+        <addDefaultValue
+            tableName="document_types"
+            columnName="system"
+            defaultValueNumeric="false"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="document_types"
+                columnName="system"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0004"/>
+
+        <addDefaultValue
+            tableName="documents"
+            columnName="registered_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="documents"
+                columnName="registered_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0005"/>
+
+        <addDefaultValue
+            tableName="entities"
+            columnName="national_identification_number"
+            defaultValueNumeric="'1-9'::character varying"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="entities"
+                columnName="national_identification_number"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0006"/>
+
+        <addDefaultValue
+            tableName="models"
+            columnName="created_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="models"
+                columnName="created_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0007"/>
+
+        <addDefaultValue
+            tableName="models"
+            columnName="created_by"
+            defaultValueNumeric="'me'::character varying"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="models"
+                columnName="created_by"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0008"/>
+
+        <addDefaultValue
+            tableName="models"
+            columnName="enabled"
+            defaultValueNumeric="false"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="models"
+                columnName="enabled"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0009"/>
+
+        <addDefaultValue
+            tableName="models"
+            columnName="updated_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="models"
+                columnName="updated_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0010"/>
+
+        <addDefaultValue
+            tableName="models"
+            columnName="updated_by"
+            defaultValueNumeric="'me'::character varying"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="models"
+                columnName="updated_by"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0011"/>
+
+        <addDefaultValue
+            tableName="rule_specs"
+            columnName="created_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rule_specs"
+                columnName="created_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0012"/>
+
+        <addDefaultValue
+            tableName="rule_specs"
+            columnName="updated_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rule_specs"
+                columnName="updated_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0013"/>
+
+        <addDefaultValue
+            tableName="rule_versions"
+            columnName="updated_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rule_versions"
+                columnName="updated_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0014"/>
+
+        <addDefaultValue
+            tableName="rule_versions"
+            columnName="stage"
+            defaultValueNumeric="'initial'::t_rule_version_stage"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rule_versions"
+                columnName="stage"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0015"/>
+
+        <addDefaultValue
+            tableName="rules"
+            columnName="created_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rules"
+                columnName="created_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0016"/>
+
+        <addDefaultValue
+            tableName="rules"
+            columnName="updated_at"
+            defaultValueNumeric="now()"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rules"
+                columnName="updated_at"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0017"/>
+
+        <addDefaultValue
+            tableName="rules"
+            columnName="enabled"
+            defaultValueNumeric="false"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="rules"
+                columnName="enabled"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

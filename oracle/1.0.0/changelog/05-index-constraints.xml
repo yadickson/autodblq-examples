@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0002"/>
+
+        <createIndex
+            indexName="EMP_PK_EMP_1"
+            tableName="MAE_EMPLEADO"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="EMP_PK_EMP_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0003"/>
+
+        <createIndex
+            indexName="EMP_SUP"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA1"/>
+            <column name="EMP_K_RUTEMPSUP"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="EMP_SUP"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0004"/>
+
+        <createIndex
+            indexName="IA_EMP_10"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMP_K_RUTJEFE_CORP"/>
+            <column name="SYS_C_CODESTADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_10"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0005"/>
+
+        <createIndex
+            indexName="IA_EMP_11"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="SYS_C_CODESTADO"/>
+            <column name="EMP_K_RUTJEFE_EVAL"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_11"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0006"/>
+
+        <createIndex
+            indexName="IA_EMP_12"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="SYS_C_CODESTADO"/>
+            <column name="EMP_C_EVAL360"/>
+            <column name="CAR_K_CODIGCARGO"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="UNI_K_CODUNIDAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_12"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0007"/>
+
+        <createIndex
+            indexName="IA_EMP_14"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="EMP_F_TERMICONTR"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_14"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0008"/>
+
+        <createIndex
+            indexName="IA_EMP_2"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMP_A_APELLPATER"/>
+            <column name="EMP_A_NOMBRE"/>
+            <column name="EMP_A_APELLMATER"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0009"/>
+
+        <createIndex
+            indexName="IA_EMP_3"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="CAR_K_CODIGCARGO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_3"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0010"/>
+
+        <createIndex
+            indexName="IA_EMP_4"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="SYS_C_CODESTADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_4"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0011"/>
+
+        <createIndex
+            indexName="IA_EMP_5"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMPL_CODG"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_5"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0012"/>
+
+        <createIndex
+            indexName="IA_EMP_6"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="SYS_C_DEPTO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_6"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0013"/>
+
+        <createIndex
+            indexName="IA_EMP_7"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="SYS_C_TIPOJORNAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_7"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0014"/>
+
+        <createIndex
+            indexName="IA_EMP_8"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="SYS_C_CODESTADO"/>
+            <column name="EMP_A_APELLPATER"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IA_EMP_8"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0015"/>
+
+        <createIndex
+            indexName="IF_EMP1_1"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="UNI_K_CODUNIDAD"/>
+            <column name="SYS_C_CODESTADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IF_EMP1_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0016"/>
+
+        <createIndex
+            indexName="IF_EMP1_3"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="EMP_K_RUTEMPSUP"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IF_EMP1_3"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0017"/>
+
+        <createIndex
+            indexName="IF_EMP1_4"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="SYS_C_SUCURSAL"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IF_EMP1_4"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0018" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0018"/>
+
+        <createIndex
+            indexName="IF_EMP2_2"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="SYS_C_SUCURSAL"/>
+            <column name="SYS_C_CODBANCO"/>
+            <column name="SYS_C_OFIPAGO"/>
+            <column name="SYS_C_CODIGOPAGO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IF_EMP2_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0019"/>
+
+        <createIndex
+            indexName="IF_EMP_1_FAL"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="SYS_C_DEPTO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IF_EMP_1_FAL"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0020" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0020"/>
+
+        <createIndex
+            indexName="IG_EMP5"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="SYS_C_SUCURSAL"/>
+            <column name="SYS_C_CODESTADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IG_EMP5"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0021" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0021"/>
+
+        <createIndex
+            indexName="IG_EMP6"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="SYS_C_SUCURSAL"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IG_EMP6"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0022" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0022"/>
+
+        <createIndex
+            indexName="IG_EMP7"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="SYS_C_TIPOHORARI"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IG_EMP7"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0023" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0023"/>
+
+        <createIndex
+            indexName="IND_EMP8"
+            tableName="MAE_EMPLEADO"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_C_JORNFLEXIBLE"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_EMPLEADO"
+                indexName="IND_EMP8"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0024" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0024"/>
+
+        <createIndex
+            indexName="GRC_PK_GRC_1"
+            tableName="MAE_GRCARACT"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="TIP_K_TIPOCARACT"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_GRCARACT"
+                indexName="GRC_PK_GRC_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0025" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0025"/>
+
+        <createIndex
+            indexName="IA_GRC_2"
+            tableName="MAE_GRCARACT"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_GRCARACT"
+                indexName="IA_GRC_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0026" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0026"/>
+
+        <createIndex
+            indexName="IF_GRCE_2"
+            tableName="MAE_GRCARACT"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="TIP_K_TIPOCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_GRCARACT"
+                indexName="IF_GRCE_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0027" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0027"/>
+
+        <createIndex
+            indexName="IF_GRCE_3"
+            tableName="MAE_GRCARACT"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="TIP_K_TIPOCARACT"/>
+            <column name="DEF_K_CODCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_GRCARACT"
+                indexName="IF_GRCE_3"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0028" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0028"/>
+
+        <createIndex
+            indexName="IP_GRCE"
+            tableName="MAE_GRCARACT"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="DEF_K_CODCARACT"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="TIP_K_TIPOCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_GRCARACT"
+                indexName="IP_GRCE"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0029" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0029"/>
+
+        <createIndex
+            indexName="CAR_PK_CAR_1"
+            tableName="MAE_CARGOS"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="CAR_K_CODIGCARGO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARGOS"
+                indexName="CAR_PK_CAR_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0030" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0030"/>
+
+        <createIndex
+            indexName="IA_CARGOS1"
+            tableName="MAE_CARGOS"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARGOS"
+                indexName="IA_CARGOS1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0031" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0031"/>
+
+        <createIndex
+            indexName="IA_CARGOS2"
+            tableName="MAE_CARGOS"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="CAR_A_NOMBCARGO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARGOS"
+                indexName="IA_CARGOS2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0032" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0032"/>
+
+        <createIndex
+            indexName="CARG_PK_CARG_1"
+            tableName="MAE_CARACT"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="TIP_K_TIPOCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARACT"
+                indexName="CARG_PK_CARG_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0033" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0033"/>
+
+        <createIndex
+            indexName="IA_CARG_2"
+            tableName="MAE_CARACT"
+            unique="false"
+        >
+            <column name="TIP_C_DESCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARACT"
+                indexName="IA_CARG_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0034" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0034"/>
+
+        <createIndex
+            indexName="I_EVA_1"
+            tableName="MAE_CARACT"
+            unique="false"
+        >
+            <column name="TIP_C_EVAL"/>
+            <column name="TIP_K_TIPOCARACT"/>
+            <column name="CIA_K_EMPRESA"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_CARACT"
+                indexName="I_EVA_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0035" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0035"/>
+
+        <createIndex
+            indexName="IA_UNI_2"
+            tableName="MAE_UNIDADES"
+            unique="false"
+        >
+            <column name="UNI_K_CODUNIDAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_UNIDADES"
+                indexName="IA_UNI_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0036" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0036"/>
+
+        <createIndex
+            indexName="UNI_PK_UNI_1"
+            tableName="MAE_UNIDADES"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="UNI_K_CODUNIDAD"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_UNIDADES"
+                indexName="UNI_PK_UNI_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0037" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0037"/>
+
+        <createIndex
+            indexName="VAL_PK_VAL_1"
+            tableName="MAE_VALCARAC"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="TIP_K_TIPOCARACT"/>
+            <column name="VAL_K_CODCARACT"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_VALCARAC"
+                indexName="VAL_PK_VAL_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0038" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0038"/>
+
+        <createIndex
+            indexName="IA_RET_2"
+            tableName="MAE_RETRETIROS"
+            unique="false"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="RET_F_INICICONTR"/>
+            <column name="RET_F_TERMICONTR"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_RETRETIROS"
+                indexName="IA_RET_2"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0039" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0039"/>
+
+        <createIndex
+            indexName="RET_PK_RET_1"
+            tableName="MAE_RETRETIROS"
+            unique="true"
+        >
+            <column name="CIA_K_EMPRESA"/>
+            <column name="EMP_K_RUTEMPLEAD"/>
+            <column name="RET_F_PERIODPROC"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_RETRETIROS"
+                indexName="RET_PK_RET_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0040" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0040"/>
+
+        <createIndex
+            indexName="PER_FAL_01"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_A_APELLPATER"/>
+            <column name="PER_A_APELLMATER"/>
+            <column name="PER_A_NOMBRE"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_01"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0041" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0041"/>
+
+        <createIndex
+            indexName="PER_FAL_02"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_RUTPERSONA"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_02"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0042" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0042"/>
+
+        <createIndex
+            indexName="PER_FAL_03"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="SPR_C_EMPRESA"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_03"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0043" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0043"/>
+
+        <createIndex
+            indexName="PER_FAL_04"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_ORIGEN"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_04"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0044" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0044"/>
+
+        <createIndex
+            indexName="PER_FAL_05"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="SPR_C_CODCARGO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_05"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0045" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0045"/>
+
+        <createIndex
+            indexName="PER_FAL_06"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_A_APELLPATER"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_06"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0046" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0046"/>
+
+        <createIndex
+            indexName="PER_FAL_07"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_NUMUSER"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_07"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0047" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0047"/>
+
+        <createIndex
+            indexName="PER_FAL_08"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_CODPAIS"/>
+            <column name="PER_C_NUMDOCU"/>
+            <column name="PER_C_TIPODOCU"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_08"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0048" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0048"/>
+
+        <createIndex
+            indexName="PER_FAL_09"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="SPR_C_ROLEMPLEADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_09"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0049" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0049"/>
+
+        <createIndex
+            indexName="PER_FAL_10"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_NUMDOCU"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_10"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0050" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0050"/>
+
+        <createIndex
+            indexName="PER_FAL_11"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_F_TERMICONTR"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_11"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0051" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0051"/>
+
+        <createIndex
+            indexName="PER_FAL_12"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_RUTEMPSUP"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_12"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0052" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0052"/>
+
+        <createIndex
+            indexName="PER_FAL_13"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_OFICINA"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_13"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0053" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0053"/>
+
+        <createIndex
+            indexName="PER_FAL_14"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_A_NOMBRE"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_14"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0054" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0054"/>
+
+        <createIndex
+            indexName="PER_FAL_15"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_A_APELLMATER"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_15"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0055" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-05.0055"/>
+
+        <createIndex
+            indexName="PER_FAL_16"
+            tableName="MAE_PERSONAS_FALABELLA"
+            unique="false"
+        >
+            <column name="PER_C_CODPAIS"/>
+            <column name="SPR_C_ROLEMPLEADO"/>
+
+        </createIndex>
+
+        <rollback>
+            <dropIndex
+                tableName="MAE_PERSONAS_FALABELLA"
+                indexName="PER_FAL_16"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

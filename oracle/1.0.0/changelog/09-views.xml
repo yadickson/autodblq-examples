@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0002"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/MAE_DEFCARACT.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "MAE_DEFCARACT" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0003"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/SYS_CODE.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "SYS_CODE" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0004"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/SYS_CODE_FALA.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "SYS_CODE_FALA" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

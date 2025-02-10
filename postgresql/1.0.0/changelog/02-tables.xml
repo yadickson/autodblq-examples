@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0002"/>
+
+        <createTable tableName="actions" remarks="Actions associated with entities">
+            <column name="id" type="varchar(100)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="registration date and time">
+                <constraints nullable="true"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="free secondary action classification">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="varchar(100)" remarks="free event status">
+                <constraints nullable="true"/>
+            </column>
+            <column name="executed_at" type="timestamp" remarks="when the event occurs">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_geo" type="varchar(100)" remarks="approximated geolocated address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_ip" type="varchar(32)" remarks="internet address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_transactions" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_instruments" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="description" type="varchar(200)" remarks="action context">
+                <constraints nullable="true"/>
+            </column>
+            <column name="custom_data" type="json" remarks="extra data on event">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="actions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0003"/>
+
+        <createTable tableName="alerts" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rule_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spec_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="execution_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="detected_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exploded_transaction_id" type="varchar(36)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="related_transactions" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_actions" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_alerts" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="custom_data" type="json" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scores" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="tags" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="fraud" type="is_fraud" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_entities" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_instruments" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="assigned_to" type="varchar(50)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deadline" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="disposition" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="state" type="t_alert_state" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="title" type="varchar(100)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="score" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="amount" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deadline_date" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="alerts"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0004"/>
+
+        <createTable tableName="alerts_simulation" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rule_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spec_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="execution_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="detected_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exploded_transaction_id" type="varchar(36)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="related_transactions" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_actions" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_alerts" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="custom_data" type="json" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scores" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="tags" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="fraud" type="is_fraud" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_entities" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="related_instruments" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="assigned_to" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deadline" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="disposition" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="state" type="t_alert_state" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="title" type="varchar(100)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="score" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="amount" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deadline_date" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="alerts_simulation"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0005"/>
+
+        <createTable tableName="audits" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="related_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resource_type" type="t_custom_field_resource" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="custom_data" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="audits"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0006"/>
+
+        <createTable tableName="client_configs" remarks="">
+            <column name="key" type="varchar(100)" remarks="configuration key">
+                <constraints nullable="true"/>
+            </column>
+            <column name="value" type="varchar(500)" remarks="configuration value">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="client_configs"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0007"/>
+
+        <createTable tableName="custom_fields" remarks="custom fields associated with resources">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="resource_type" type="t_custom_field_resource" remarks="in order to group different types">
+                <constraints nullable="false"/>
+            </column>
+            <column name="internal_name" type="varchar(100)" remarks="property name on custom data object">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="registration date and time">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar(100)" remarks="display name">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_type" type="t_custom_field_type" remarks="display data type">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(250)" remarks="field description">
+                <constraints nullable="true"/>
+            </column>
+            <column name="visible" type="bool" remarks="indicates if the field is visible for selection, any rule created using this field is evaluated even if not visible">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="options" type="varchar(256)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="filter_resource_type" type="varchar(256)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="custom_fields"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0008"/>
+
+        <createTable tableName="document_types" remarks="SC registered document types">
+            <column name="code" type="varchar(50)" remarks="key name">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(250)" remarks="document type description">
+                <constraints nullable="true"/>
+            </column>
+            <column name="system" type="bool" remarks="value is system defined">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content_type" type="varchar(250)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="document_types"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0009"/>
+
+        <createTable tableName="documents" remarks="List of related entity documents">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="registration date and time">
+                <constraints nullable="true"/>
+            </column>
+            <column name="file_name" type="varchar(100)" remarks="name of document">
+                <constraints nullable="true"/>
+            </column>
+            <column name="size" type="int8" remarks="size of document in bytes">
+                <constraints nullable="true"/>
+            </column>
+            <column name="resource_type" type="varchar(20)" remarks="resource type of document">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_resource" type="int8" remarks="identity of resource type">
+                <constraints nullable="true"/>
+            </column>
+            <column name="document_type_id" type="varchar(50)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="documents"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0010"/>
+
+        <createTable tableName="entities" remarks="List of registered entities">
+            <column name="id" type="varchar(50)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="registration date and time">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type" type="t_entity_type" remarks="main entity type">
+                <constraints nullable="true"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="secondary entity classification">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="t_entity_status" remarks="entity status on SC platform">
+                <constraints nullable="true"/>
+            </column>
+            <column name="source" type="t_resource_context" remarks="indicates source registration context">
+                <constraints nullable="true"/>
+            </column>
+            <column name="name" type="varchar" remarks="entity name as full name, company name or any other known entity name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="year_of_birth" type="int4" remarks="birth date or company legal registration date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="month_of_birth" type="int4" remarks="birth date or company legal registration date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="day_of_birth" type="int4" remarks="birth date or company legal registration date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="gender" type="t_gender" remarks="person gender">
+                <constraints nullable="true"/>
+            </column>
+            <column name="custom_data" type="json" remarks="extra business related data fields">
+                <constraints nullable="false"/>
+            </column>
+            <column name="national_identification_number" type="varchar" remarks="national identification number">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birth_date" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0011"/>
+
+        <createTable tableName="execution_rules" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="execution_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rule_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spec_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="count_alert" type="varchar(150)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="execution_rules"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0012"/>
+
+        <createTable tableName="executions" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="started_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ended_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar(1000)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status_code" type="t_execution_status" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="execution_type" type="t_execution_type" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="data_ends_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="data_start_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="executions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0013"/>
+
+        <createTable tableName="exploded_transactions" remarks="Processed transactions with extra information adjusted over a reduced period from total data range.
+
+* s_ prefix indicates sender fields
+* r_ prefix indicates receiver fields
+* c_ prefix indicates custom fields from business SC">
+            <column name="id" type="varchar(36)" remarks="client transaction identifier">
+                <constraints nullable="false"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="secondary transaction classification">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="varchar(100)" remarks="event status">
+                <constraints nullable="true"/>
+            </column>
+            <column name="executed_at" type="timestamp" remarks="when the event occurs">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_geo" type="varchar(100)" remarks="approximated geolocated address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_ip" type="varchar(32)" remarks="internet address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_country_code" type="varchar(3)" remarks="country code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_context" type="t_resource_context" remarks="internal or external entity">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_amount" type="numeric" remarks="transaction amount">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_currency" type="varchar(3)" remarks="currency code using ISO 4217">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_context" type="t_resource_context" remarks="internal or external">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_amount" type="numeric" remarks="transaction amount">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_currency" type="varchar(3)" remarks="currency code using ISO 4217">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_channel" type="varchar" remarks="transaction channel">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_product" type="varchar" remarks="product code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_code" type="varchar" remarks="transaction code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_branch_code" type="varchar" remarks="transaction channel">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_name" type="varchar" remarks="declared receiver name by sender">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_name" type="varchar" remarks="receiver bank name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_code" type="varchar" remarks="receiver bank name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_message" type="varchar" remarks="sender written message">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_code" type="varchar" remarks="receiver commerce code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_name" type="varchar" remarks="receiver commerce name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_cli_fan_acc" type="bool" remarks="internal sender owns FAN product">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="exploded_transactions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0014"/>
+
+        <createTable tableName="exploded_transactions_historic" remarks="Processed historical transactions using same transactions_exploded table fields">
+            <column name="id" type="varchar(36)" remarks="client transaction identifier">
+                <constraints nullable="true"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="secondary transaction classification">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="varchar(100)" remarks="event status">
+                <constraints nullable="true"/>
+            </column>
+            <column name="executed_at" type="timestamp" remarks="when the event occurs">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_geo" type="varchar(100)" remarks="approximated geolocated address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_ip" type="varchar(32)" remarks="internet address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_country_code" type="varchar(3)" remarks="country code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_context" type="t_resource_context" remarks="internal or external entity">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_amount" type="numeric" remarks="transaction amount">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_currency" type="varchar(3)" remarks="currency code using ISO 4217">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_context" type="t_resource_context" remarks="internal or external">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_amount" type="numeric" remarks="transaction amount">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_currency" type="varchar(3)" remarks="currency code using ISO 4217">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_channel" type="varchar" remarks="transaction channel">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_product" type="varchar" remarks="product code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_code" type="varchar" remarks="transaction code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_branch_code" type="varchar" remarks="transaction channel">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_name" type="varchar" remarks="declared receiver name by sender">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_name" type="varchar" remarks="receiver bank name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_code" type="varchar" remarks="receiver bank name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_message" type="varchar" remarks="sender written message">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_code" type="varchar" remarks="receiver commerce code">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_name" type="varchar" remarks="receiver commerce name">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_cli_fan_acc" type="bool" remarks="internal sender owns FAN product">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="exploded_transactions_historic"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0015"/>
+
+        <createTable tableName="flagging_value_categories" remarks="list of categories of flagging values">
+            <column name="code" type="varchar(30)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)" remarks="category name to display">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(500)" remarks="category name to display">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="flagging_value_categories"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0016"/>
+
+        <createTable tableName="flagging_values" remarks="list of flagging values in order to flag elements like entities or instruments">
+            <column name="flagged_category_code" type="varchar(30)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="value" type="varchar(100)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="flagging_values"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0017"/>
+
+        <createTable tableName="instruments" remarks="associated entity instruments or some auto registered instruments from transactions">
+            <column name="id" type="varchar(20)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="registration date and time">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type" type="varchar(100)" remarks="free instrument classification provided by SC">
+                <constraints nullable="true"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="free instrument classification provided by SC">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="t_instrument_status" remarks="instrument status">
+                <constraints nullable="true"/>
+            </column>
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="source" type="t_resource_context" remarks="* represents owning based on SC pov">
+                <constraints nullable="true"/>
+            </column>
+            <column name="custom_data" type="json" remarks="extra data associated with the instrument">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="instruments"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0018"/>
+
+        <createTable tableName="investigation_checklist" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_resource_type" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="investigation_result" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_level" type="int4" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_checklist_structure" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="resource_type" type="t_checklist_resource" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="investigation_checklist"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0019"/>
+
+        <createTable tableName="investigation_checklist_group" remarks="tabla para almacenar distintos grupos de un ivestigation checklist">
+            <column name="id" type="int4" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="group_name" type="varchar" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description_group" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="required_group" type="bool" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="idchecklist" type="int4" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="custom_message" type="varchar" remarks="message shown if any fields with a required star in group are empty">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="investigation_checklist_group"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0020"/>
+
+        <createTable tableName="investigation_checklist_item" remarks="tabla para almacenar distintos items pertenecientes a un grupo de un ivestigation checklist">
+            <column name="id" type="int4" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_group" type="int4" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="control_type" type="json" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="requerid" type="bool" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="investigation_checklist_item"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0021"/>
+
+        <createTable tableName="models" remarks="Contains information from base models or used in alerts detection process">
+            <column name="code" type="varchar(50)" remarks="common human readable identifier used to name the models">
+                <constraints nullable="true"/>
+            </column>
+            <column name="category" type="t_model_category" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="bool" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updated_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="models"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0022"/>
+
+        <createTable tableName="product_statistics" remarks="max amounts by entity according certain period over products">
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="product_code" type="varchar" remarks="code identifying the used product">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type" type="t_accounting_entry_type" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="max" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="min" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="average" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mean" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="period_in_days" type="int4" remarks="representing statistics base period">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="product_statistics"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0023"/>
+
+        <createTable tableName="rule_spec_executions" remarks="">
+            <column name="alert_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="execution_id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="rule_spec_executions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0024"/>
+
+        <createTable tableName="rule_spec_simulations" remarks="">
+            <column name="id" type="int8" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rule_spec_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="alerts" type="int4" remarks="alerts count detected">
+                <constraints nullable="true"/>
+            </column>
+            <column name="startedAt" type="timestamp" remarks="when the rules was executed">
+                <constraints nullable="true"/>
+            </column>
+            <column name="endedAt" type="timestamp" remarks="when the rules did stop">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status_message" type="varchar(1000)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status_code" type="t_simulation_status" remarks="execution result status">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="rule_spec_simulations"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0025"/>
+
+        <createTable tableName="rule_specs" remarks="Each change to the rule content is saved in order to trace the rule history.">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="rule_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="content" type="json" remarks="rules parameters configuration structured and known by components implementing the model">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar(150)" remarks="creation user identifier">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="creation timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="rule_specs"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0026"/>
+
+        <createTable tableName="rule_versions" remarks="rule internal versioning model, all version has one related spec but some spec could not have any version">
+            <column name="rule_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="spec_id" type="int8" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="version" type="int2" remarks="simple incremental version number">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="t_rule_version_status" remarks="represents a kind of rules status">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="varchar(150)" remarks="creation user identifier">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="creation timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="stage" type="t_rule_version_stage" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="rule_versions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0027"/>
+
+        <createTable tableName="rules" remarks="Models implementation parameters are transformed into rules in order to evaluate the model">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="varchar(100)" remarks="tiny text explaining the rule">
+                <constraints nullable="true"/>
+            </column>
+            <column name="description" type="varchar(1000)" remarks="detailed description">
+                <constraints nullable="true"/>
+            </column>
+            <column name="tags" type="json" remarks="tags array to improve actions or better search experience">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar(150)" remarks="creation user identifier">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp" remarks="creation timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="model_code" type="varchar(50)" remarks="base model used to create the rule">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="varchar(150)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="bool" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="rules"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0028"/>
+
+        <createTable tableName="schemaversions" remarks="">
+            <column name="schemaversionsid" type="int4" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scriptname" type="varchar(255)" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="applied" type="timestamp" remarks="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="schemaversions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0029"/>
+
+        <createTable tableName="transactions" remarks="Transaction data registered as JSON object with all data not exploded">
+            <column name="id" type="varchar(20)" remarks="common SC transaction system unique identification">
+                <constraints nullable="false"/>
+            </column>
+            <column name="subtype" type="varchar(100)" remarks="free secondary transaction classification">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="varchar(100)" remarks="free transaction result status">
+                <constraints nullable="true"/>
+            </column>
+            <column name="executed_at" type="timestamp" remarks="when the event occurs">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_geo" type="varchar(100)" remarks="approximated geolocated address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_ip" type="varchar(32)" remarks="internet address">
+                <constraints nullable="true"/>
+            </column>
+            <column name="address_country_code" type="varchar(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_context" type="t_resource_context" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_amount" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="s_currency" type="varchar(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_context" type="t_resource_context" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_instrument_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_amount" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_currency" type="varchar(3)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_channel" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_product" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_code" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_branch_code" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_name" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_name" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_bank_code" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_message" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_code" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_trx_commerce_name" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="c_cli_fan_acc" type="bool" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="transactions"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0030"/>
+
+        <createTable tableName="transactions_statistics" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="product_code" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type" type="t_accounting_entry_type" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="r_entity_id" type="varchar(20)" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="min_amount" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="max_amount" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="period_in_days" type="int4" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_mean_withdrawl_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_q_withdrawl_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_mean_deposit_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_q_deposit_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_q_deposit_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_mean_deposit_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_q_withdrawl_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_sum_deposit_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_sum_withdrawl_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_std_withdrawl_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_std_deposit_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trx_mean_withdrawl_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="q_trx_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="q_trx_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="sum_trx_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mean_trx_month" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="mean_trx_day" type="numeric" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="transactions_statistics"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0031"/>
+
+        <createTable tableName="checklist" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description_name" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="t_checklist_status" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="body" type="json" remarks="Checklist body, composed of one or more groups and each one with one or more elements.">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="checklist"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-02.0032"/>
+
+        <createTable tableName="checklist_structure" remarks="">
+            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_checklist" type="int4" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="structure" type="json" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="registered_at" type="timestamp" remarks="">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_by" type="varchar" remarks="">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="checklist_structure"/>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

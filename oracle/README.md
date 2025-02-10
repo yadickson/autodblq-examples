@@ -1,5 +1,5 @@
-# autodblq-examples by postgresql
-Examples to get liquibase structure from postgresql database
+# autodblq-examples by oracle
+Examples to get liquibase structure from oracle database
 
 ## From local or remote
 

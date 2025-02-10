@@ -36,25 +36,44 @@
         <url>https://github.com/yadickson/autodblq-examples</url>
     </organization>
 
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <host>localhost</host>
+                <port>5432</port>
+                <db>master</db>
+                <user>sqluser</user>
+                <pass>sqluser.1234</pass>
+            </properties>
+        </profile>
+        <profile>
+            <id>remote</id>
+            <properties>
+                <host>186.103.210.141</host>
+                <port>4020</port>
+                <db>client_context</db>
+                <user>aiB2U</user>
+                <pass>aiB2U..#a</pass>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
 
             <plugin>
                 <groupId>com.github.yadickson</groupId>
                 <artifactId>autodblq</artifactId>
-                <version>2.0.4</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generator</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>2.1.0-SNAPSHOT</version>
                 <configuration>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://...:.../...</url>
-                    <username>...</username>
-                    <password>...</password>
+                    <url>jdbc:postgresql://${host}:${port}/${db}</url>
+                    <username>${user}</username>
+                    <password>${pass}</password>
                     <author>yadickson.soto</author>
                     <version>1.0.0</version>
                     <outputDirectory>.</outputDirectory>
@@ -80,6 +99,8 @@
                         <param>t_rule_version_stage</param>
                         <param>t_rule_version_status</param>
                         <param>t_simulation_status</param>
+                        <param>t_checklist_resource</param>
+                        <param>t_checklist_status</param>
                     </types>
                     <tables>
                         <param>actions</param>
@@ -111,18 +132,44 @@
                         <param>schemaversions</param>
                         <param>transactions</param>
                         <param>transactions_statistics</param>
+                        <param>checklist</param>
+                        <param>checklist_structure</param>
                     </tables>
                     <views>
                         <param>alerts_search</param>
                         <param>get_rule_published</param>
                         <param>rule_search</param>
+                        <param>exploded_transactions_search</param>
                     </views>
                     <dataTables>
                         <param>models</param>
                         <param>custom_fields</param>
-                        <param>entities</param>
-                        <param>instruments</param>
+<!--                        <param>entities</param>-->
+<!--                        <param>instruments</param>-->
                     </dataTables>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>42.7.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <outputFileEncoding>UTF-8</outputFileEncoding>
+                    <changeLogFile>masterchangelog.xml</changeLogFile>
+                    <verbose>true</verbose>
+                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://${host}:${port}/${db}</url>
+                    <username>${user}</username>
+                    <password>${pass}</password>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -138,3 +185,4 @@
     </build>
 
 </project>
+

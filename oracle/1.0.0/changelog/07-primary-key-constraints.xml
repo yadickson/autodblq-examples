@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0002"/>
+
+        <addPrimaryKey
+            constraintName="EMP_PK_EMP_1"
+            tableName="MAE_EMPLEADO"
+            columnNames="cia_k_empresa,emp_k_rutemplead"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_EMPLEADO"
+                constraintName="EMP_PK_EMP_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0003"/>
+
+        <addPrimaryKey
+            constraintName="GRC_PK_GRC_1"
+            tableName="MAE_GRCARACT"
+            columnNames="cia_k_empresa,tip_k_tipocaract,emp_k_rutemplead"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_GRCARACT"
+                constraintName="GRC_PK_GRC_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0004"/>
+
+        <addPrimaryKey
+            constraintName="CAR_PK_CAR_1"
+            tableName="MAE_CARGOS"
+            columnNames="cia_k_empresa,car_k_codigcargo"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_CARGOS"
+                constraintName="CAR_PK_CAR_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0005"/>
+
+        <addPrimaryKey
+            constraintName="CARG_PK_CARG_1"
+            tableName="MAE_CARACT"
+            columnNames="cia_k_empresa,tip_k_tipocaract"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_CARACT"
+                constraintName="CARG_PK_CARG_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0006"/>
+
+        <addPrimaryKey
+            constraintName="UNI_PK_UNI_1"
+            tableName="MAE_UNIDADES"
+            columnNames="cia_k_empresa,uni_k_codunidad"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_UNIDADES"
+                constraintName="UNI_PK_UNI_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0007"/>
+
+        <addPrimaryKey
+            constraintName="VAL_PK_VAL_1"
+            tableName="MAE_VALCARAC"
+            columnNames="cia_k_empresa,tip_k_tipocaract,val_k_codcaract"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_VALCARAC"
+                constraintName="VAL_PK_VAL_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-07.0008"/>
+
+        <addPrimaryKey
+            constraintName="RET_PK_RET_1"
+            tableName="MAE_RETRETIROS"
+            columnNames="cia_k_empresa,emp_k_rutemplead,ret_f_periodproc"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="MAE_RETRETIROS"
+                constraintName="RET_PK_RET_1"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

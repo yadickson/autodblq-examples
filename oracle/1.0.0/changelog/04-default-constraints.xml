@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0002"/>
+
+        <addDefaultValue
+            tableName="MAE_EMPLEADO"
+            columnName="EMP_N_ADICAUGE"
+            defaultValueNumeric="0"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="MAE_EMPLEADO"
+                columnName="EMP_N_ADICAUGE"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0003"/>
+
+        <addDefaultValue
+            tableName="MAE_EMPLEADO"
+            columnName="EMP_N_SECTARJPOS"
+            defaultValueNumeric="1"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="MAE_EMPLEADO"
+                columnName="EMP_N_SECTARJPOS"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0004"/>
+
+        <addDefaultValue
+            tableName="MAE_PERSONAS_FALABELLA"
+            columnName="PER_C_INDUSOPOS"
+            defaultValueNumeric="'S'"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="MAE_PERSONAS_FALABELLA"
+                columnName="PER_C_INDUSOPOS"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0005"/>
+
+        <addDefaultValue
+            tableName="MAE_PERSONAS_FALABELLA"
+            columnName="PER_C_INDUSOPOSMARSAL"
+            defaultValueNumeric="'S'"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="MAE_PERSONAS_FALABELLA"
+                columnName="PER_C_INDUSOPOSMARSAL"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="oracle" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-04.0006"/>
+
+        <addDefaultValue
+            tableName="MAE_PERSONAS_FALABELLA"
+            columnName="PER_N_SECTARJPOS"
+            defaultValueNumeric="1"
+        />
+
+        <rollback>
+            <dropDefaultValue
+                tableName="MAE_PERSONAS_FALABELLA"
+                columnName="PER_N_SECTARJPOS"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,138 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.yadickson</groupId>
+    <artifactId>autodblq-examples</artifactId>
+    <version>1.0.0</version>
+    <name>Maven Auto Database to Liquibase Generator from Plugin</name>
+    <description>Maven plugin to generate xml liquibase files from database</description>
+    <url>https://github.com/yadickson/autodblq-examples</url>
+
+    <licenses>
+        <license>
+            <name>GPL-3.0</name>
+            <url>https://opensource.org/licenses/GPL-3.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/yadickson/autodblq-examples</url>
+        <connection>scm:git:git://github.com/yadickson/autodblq-examples.git</connection>
+        <developerConnection>scm:git:git@github.com:yadickson/autodblq-examples.git</developerConnection>
+    </scm>
+    
+    <developers>
+        <developer>
+            <id>yadickson</id>
+            <name>Yadickson Soto</name>
+            <email>yadickson@gmail.com</email>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>Yadickson Soto</name>
+        <url>https://github.com/yadickson/autodblq-examples</url>
+    </organization>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <host>10.1.32.54</host>
+                <port>1531</port>
+                <db>sprfa</db>
+                <user>USPRPLO</user>
+                <pass>N8HFS0030A</pass>
+            </properties>
+        </profile>
+        <profile>
+            <id>remote</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <host>10.1.32.54</host>
+                <port>1531</port>
+                <db>sprfa</db>
+                <user>USPRPLO</user>
+                <pass>N8HFS0030A</pass>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>com.github.yadickson</groupId>
+                <artifactId>autodblq</artifactId>
+                <version>2.1.0-SNAPSHOT</version>
+                <configuration>
+                    <driver>oracle.jdbc.driver.OracleDriver</driver>
+                    <url>jdbc:oracle:thin:@${host}:${port}/${db}</url>
+                    <username>${user}</username>
+                    <password>${pass}</password>
+                    <author>yadickson.soto</author>
+                    <version>1.0.0</version>
+                    <outputDirectory>.</outputDirectory>
+                    <addDbms>true</addDbms>
+                    <addNullable>true</addNullable>
+                    <addIdentity>true</addIdentity>
+                    <keepTypes>true</keepTypes>
+                    <keepNames>true</keepNames>
+                    <tables>
+                        <param>MAE_EMPLEADO</param>
+                        <param>MAE_GRCARACT</param>
+                        <param>MAE_CARGOS</param>
+                        <param>MAE_CARACT</param>
+                        <param>MAE_UNIDADES</param>
+                        <param>MAE_VALCARAC</param>
+                        <param>MAE_RETRETIROS</param>
+                        <param>MAE_PERSONAS_FALABELLA</param>
+                        <param>TAB_EMTRTARJETAS</param>
+                    </tables>
+                    <views>
+                        <param>MAE_DEFCARACT</param>
+                        <param>SYS_CODE</param>
+                        <param>SYS_CODE_FALA</param>
+                    </views>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.oracle.database.jdbc</groupId>
+                        <artifactId>ojdbc11</artifactId>
+                        <version>23.2.0.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <outputFileEncoding>UTF-8</outputFileEncoding>
+                    <changeLogFile>${changeLogFile}</changeLogFile>
+                    <verbose>true</verbose>
+                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                    <driver>oracle.jdbc.driver.OracleDriver</driver>
+                    <url>jdbc:oracle:thin:@${host}:${port}/${db}</url>
+                    <username>${user}</username>
+                    <password>${pass}</password>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.oracle.database.jdbc</groupId>
+                        <artifactId>ojdbc11</artifactId>
+                        <version>23.2.0.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
