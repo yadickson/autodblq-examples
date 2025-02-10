@@ -44,9 +44,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_entity_id_fkey"
             baseTableName="alerts"
-            baseColumnNames="entity_id,entity_id,entity_id,entity_id"
+            baseColumnNames="entity_id"
             referencedTableName="entities"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -66,9 +66,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_execute_id_fkey"
             baseTableName="alerts"
-            baseColumnNames="execution_id,execution_id,execution_id,execution_id"
+            baseColumnNames="execution_id"
             referencedTableName="executions"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -88,9 +88,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_rule_id_fkey"
             baseTableName="alerts"
-            baseColumnNames="rule_id,rule_id,rule_id,rule_id"
+            baseColumnNames="rule_id"
             referencedTableName="rules"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -110,9 +110,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_spec_id_fkey"
             baseTableName="alerts"
-            baseColumnNames="spec_id,spec_id,spec_id,spec_id"
+            baseColumnNames="spec_id"
             referencedTableName="rule_specs"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -132,9 +132,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_transaction_id_fkey"
             baseTableName="alerts"
-            baseColumnNames="exploded_transaction_id,exploded_transaction_id,exploded_transaction_id,exploded_transaction_id"
+            baseColumnNames="exploded_transaction_id"
             referencedTableName="exploded_transactions"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -154,9 +154,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_entity_id_fkey"
             baseTableName="alerts_simulation"
-            baseColumnNames="entity_id,entity_id,entity_id,entity_id"
+            baseColumnNames="entity_id"
             referencedTableName="entities"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -176,9 +176,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_execute_id_fkey"
             baseTableName="alerts_simulation"
-            baseColumnNames="execution_id,execution_id,execution_id,execution_id"
+            baseColumnNames="execution_id"
             referencedTableName="executions"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -198,9 +198,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_rule_id_fkey"
             baseTableName="alerts_simulation"
-            baseColumnNames="rule_id,rule_id,rule_id,rule_id"
+            baseColumnNames="rule_id"
             referencedTableName="rules"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -220,9 +220,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_spec_id_fkey"
             baseTableName="alerts_simulation"
-            baseColumnNames="spec_id,spec_id,spec_id,spec_id"
+            baseColumnNames="spec_id"
             referencedTableName="rule_specs"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
@@ -242,9 +242,9 @@
         <addForeignKeyConstraint
             constraintName="alerts_transaction_id_fkey"
             baseTableName="alerts_simulation"
-            baseColumnNames="exploded_transaction_id,exploded_transaction_id,exploded_transaction_id,exploded_transaction_id"
+            baseColumnNames="exploded_transaction_id"
             referencedTableName="exploded_transactions"
-            referencedColumnNames="id,id,id,id"
+            referencedColumnNames="id"
             onDelete="NO ACTION"
             onUpdate="NO ACTION"
         />
