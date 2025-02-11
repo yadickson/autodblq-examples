@@ -39,25 +39,15 @@
     <profiles>
         <profile>
             <id>local</id>
-            <properties>
-                <host>10.1.32.54</host>
-                <port>1531</port>
-                <db>sprfa</db>
-                <user>USPRPLO</user>
-                <pass>N8HFS0030A</pass>
-            </properties>
-        </profile>
-        <profile>
-            <id>remote</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <host>10.1.32.54</host>
+                <host>localhost</host>
                 <port>1531</port>
-                <db>sprfa</db>
-                <user>USPRPLO</user>
-                <pass>N8HFS0030A</pass>
+                <db>master</db>
+                <user>sqluser</user>
+                <pass>sqluser.1234</pass>
             </properties>
         </profile>
     </profiles>

@@ -50,16 +50,6 @@
                 <pass>sqluser.1234</pass>
             </properties>
         </profile>
-        <profile>
-            <id>remote</id>
-            <properties>
-                <host>186.103.210.141</host>
-                <port>4020</port>
-                <db>client_context</db>
-                <user>aiB2U</user>
-                <pass>aiB2U..#a</pass>
-            </properties>
-        </profile>
     </profiles>
 
     <build>
