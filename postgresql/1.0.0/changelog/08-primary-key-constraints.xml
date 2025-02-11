@@ -13,11 +13,11 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0001"/>
+        <ext:tagDatabase tag="1.0.0-08.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0002"/>
+        <ext:tagDatabase tag="1.0.0-08.0002"/>
 
         <addPrimaryKey
             constraintName="actions_pkey"
@@ -35,7 +35,7 @@
     </changeSet>
 
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0003"/>
+        <ext:tagDatabase tag="1.0.0-08.0003"/>
 
         <addPrimaryKey
             constraintName="alerts_pkey"
@@ -53,7 +53,7 @@
     </changeSet>
 
     <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0004"/>
+        <ext:tagDatabase tag="1.0.0-08.0004"/>
 
         <addPrimaryKey
             constraintName="alerts_simulation_pkey"
@@ -71,7 +71,7 @@
     </changeSet>
 
     <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0005"/>
+        <ext:tagDatabase tag="1.0.0-08.0005"/>
 
         <addPrimaryKey
             constraintName="audit_pkey"
@@ -89,7 +89,7 @@
     </changeSet>
 
     <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0006"/>
+        <ext:tagDatabase tag="1.0.0-08.0006"/>
 
         <addPrimaryKey
             constraintName="custom_fields_pkey"
@@ -107,7 +107,7 @@
     </changeSet>
 
     <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0007"/>
+        <ext:tagDatabase tag="1.0.0-08.0007"/>
 
         <addPrimaryKey
             constraintName="document_types_pkey"
@@ -125,7 +125,7 @@
     </changeSet>
 
     <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0008"/>
+        <ext:tagDatabase tag="1.0.0-08.0008"/>
 
         <addPrimaryKey
             constraintName="documents_pkey"
@@ -143,7 +143,7 @@
     </changeSet>
 
     <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0009"/>
+        <ext:tagDatabase tag="1.0.0-08.0009"/>
 
         <addPrimaryKey
             constraintName="entities_pkey"
@@ -161,7 +161,7 @@
     </changeSet>
 
     <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0010"/>
+        <ext:tagDatabase tag="1.0.0-08.0010"/>
 
         <addPrimaryKey
             constraintName="execution_rules_pkey"
@@ -179,7 +179,7 @@
     </changeSet>
 
     <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0011"/>
+        <ext:tagDatabase tag="1.0.0-08.0011"/>
 
         <addPrimaryKey
             constraintName="executions_pkey"
@@ -197,7 +197,7 @@
     </changeSet>
 
     <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0012"/>
+        <ext:tagDatabase tag="1.0.0-08.0012"/>
 
         <addPrimaryKey
             constraintName="exploded_transactions_pkey"
@@ -215,7 +215,7 @@
     </changeSet>
 
     <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0013"/>
+        <ext:tagDatabase tag="1.0.0-08.0013"/>
 
         <addPrimaryKey
             constraintName="flagging_value_categories_pkey"
@@ -233,7 +233,7 @@
     </changeSet>
 
     <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0014"/>
+        <ext:tagDatabase tag="1.0.0-08.0014"/>
 
         <addPrimaryKey
             constraintName="instruments_pkey"
@@ -251,7 +251,7 @@
     </changeSet>
 
     <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0015"/>
+        <ext:tagDatabase tag="1.0.0-08.0015"/>
 
         <addPrimaryKey
             constraintName="checklist_pk"
@@ -269,7 +269,7 @@
     </changeSet>
 
     <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0016"/>
+        <ext:tagDatabase tag="1.0.0-08.0016"/>
 
         <addPrimaryKey
             constraintName="investigation_checklist_group_pk"
@@ -287,7 +287,7 @@
     </changeSet>
 
     <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0017"/>
+        <ext:tagDatabase tag="1.0.0-08.0017"/>
 
         <addPrimaryKey
             constraintName="investigation_checklist_item_pk"
@@ -305,7 +305,25 @@
     </changeSet>
 
     <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0018"/>
+        <ext:tagDatabase tag="1.0.0-08.0018"/>
+
+        <addPrimaryKey
+            constraintName="models_code_pk"
+            tableName="models"
+            columnNames="code"
+        />
+
+        <rollback>
+            <dropPrimaryKey
+                tableName="models"
+                constraintName="models_code_pk"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0019"/>
 
         <addPrimaryKey
             constraintName="rule_spec_executions_pkey"
@@ -322,8 +340,8 @@
 
     </changeSet>
 
-    <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0019"/>
+    <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0020"/>
 
         <addPrimaryKey
             constraintName="rule_spec_simulations_pkey"
@@ -340,8 +358,8 @@
 
     </changeSet>
 
-    <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0020"/>
+    <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0021"/>
 
         <addPrimaryKey
             constraintName="rule_contents_pkey"
@@ -358,8 +376,8 @@
 
     </changeSet>
 
-    <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0021"/>
+    <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0022"/>
 
         <addPrimaryKey
             constraintName="rule_versions_pk"
@@ -376,8 +394,8 @@
 
     </changeSet>
 
-    <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0022"/>
+    <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0023"/>
 
         <addPrimaryKey
             constraintName="rules_pkey"
@@ -394,8 +412,8 @@
 
     </changeSet>
 
-    <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0023"/>
+    <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0024"/>
 
         <addPrimaryKey
             constraintName="PK_schemaversions_Id"
@@ -412,8 +430,8 @@
 
     </changeSet>
 
-    <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0024"/>
+    <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0025"/>
 
         <addPrimaryKey
             constraintName="transactions_pkey"
@@ -430,8 +448,8 @@
 
     </changeSet>
 
-    <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0025"/>
+    <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0026"/>
 
         <addPrimaryKey
             constraintName="transactions_statistics_pkey"
@@ -448,8 +466,8 @@
 
     </changeSet>
 
-    <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0026"/>
+    <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0027"/>
 
         <addPrimaryKey
             constraintName="investigation_checklist_pk"
@@ -466,8 +484,8 @@
 
     </changeSet>
 
-    <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0027"/>
+    <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-08.0028"/>
 
         <addPrimaryKey
             constraintName="checklist_structure_pk"
@@ -479,24 +497,6 @@
             <dropPrimaryKey
                 tableName="checklist_structure"
                 constraintName="checklist_structure_pk"
-            />
-        </rollback>
-
-    </changeSet>
-
-    <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-07.0028"/>
-
-        <addPrimaryKey
-                constraintName="models_code_pk"
-                tableName="models"
-                columnNames="code"
-        />
-
-        <rollback>
-            <dropPrimaryKey
-                    tableName="models"
-                    constraintName="models_code_pk"
             />
         </rollback>
 

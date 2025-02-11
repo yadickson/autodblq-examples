@@ -13,14 +13,14 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0001"/>
+        <ext:tagDatabase tag="1.0.0-02.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0002"/>
+        <ext:tagDatabase tag="1.0.0-02.0002"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE is_fraud AS enum ('not_is_fraud', 'is_fraud', 'not_declared'); ]]>
+            <![CDATA[ CREATE TYPE is_fraud AS enum ('not_declared', 'is_fraud', 'not_is_fraud'); ]]>
         </sql>
 
         <rollback>
@@ -29,10 +29,10 @@
 
     </changeSet>
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0003"/>
+        <ext:tagDatabase tag="1.0.0-02.0003"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_accounting_entry_type AS enum ('ingress', 'egress'); ]]>
+            <![CDATA[ CREATE TYPE t_accounting_entry_type AS enum ('egress', 'ingress'); ]]>
         </sql>
 
         <rollback>
@@ -41,7 +41,7 @@
 
     </changeSet>
     <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0004"/>
+        <ext:tagDatabase tag="1.0.0-02.0004"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_alert_state AS enum ('opened', 'closed'); ]]>
@@ -53,10 +53,10 @@
 
     </changeSet>
     <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0005"/>
+        <ext:tagDatabase tag="1.0.0-02.0005"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_custom_field_resource AS enum ('alert', 'rule', 'identifier', 'RULE', 'ALERT', 'actions', 'transactions', 'instruments', 'entities'); ]]>
+            <![CDATA[ CREATE TYPE t_custom_field_resource AS enum ('transactions', 'instruments', 'entities', 'RULE', 'identifier', 'rule', 'alert', 'ALERT', 'actions'); ]]>
         </sql>
 
         <rollback>
@@ -65,10 +65,10 @@
 
     </changeSet>
     <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0006"/>
+        <ext:tagDatabase tag="1.0.0-02.0006"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_custom_field_type AS enum ('decimal', 'integer', 'date_only', 'enumerated', 'identifier', 'is_fraud', 'number', 'date_and_time', 'nin', 'boolean', 'string', 'text'); ]]>
+            <![CDATA[ CREATE TYPE t_custom_field_type AS enum ('number', 'date_and_time', 'nin', 'boolean', 'string', 'text', 'date_only', 'enumerated', 'identifier', 'is_fraud', 'decimal', 'integer'); ]]>
         </sql>
 
         <rollback>
@@ -77,7 +77,7 @@
 
     </changeSet>
     <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0007"/>
+        <ext:tagDatabase tag="1.0.0-02.0007"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_entity_status AS enum ('active', 'inactive'); ]]>
@@ -89,7 +89,7 @@
 
     </changeSet>
     <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0008"/>
+        <ext:tagDatabase tag="1.0.0-02.0008"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_entity_type AS enum ('person', 'company'); ]]>
@@ -101,10 +101,10 @@
 
     </changeSet>
     <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0009"/>
+        <ext:tagDatabase tag="1.0.0-02.0009"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_execution_status AS enum ('stopped', 'created', 'running', 'ended'); ]]>
+            <![CDATA[ CREATE TYPE t_execution_status AS enum ('running', 'stopped', 'created', 'ended'); ]]>
         </sql>
 
         <rollback>
@@ -113,7 +113,7 @@
 
     </changeSet>
     <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0010"/>
+        <ext:tagDatabase tag="1.0.0-02.0010"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_execution_type AS enum ('simulation', 'validation', 'detection'); ]]>
@@ -125,10 +125,10 @@
 
     </changeSet>
     <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0011"/>
+        <ext:tagDatabase tag="1.0.0-02.0011"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_gender AS enum ('female', 'not_declared', 'male'); ]]>
+            <![CDATA[ CREATE TYPE t_gender AS enum ('not_declared', 'male', 'female'); ]]>
         </sql>
 
         <rollback>
@@ -137,7 +137,7 @@
 
     </changeSet>
     <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0012"/>
+        <ext:tagDatabase tag="1.0.0-02.0012"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_instrument_status AS enum ('active', 'inactive'); ]]>
@@ -149,7 +149,7 @@
 
     </changeSet>
     <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0013"/>
+        <ext:tagDatabase tag="1.0.0-02.0013"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_model_category AS enum ('ANOMALY_DETECTION', 'FLAGGING_LISTS', 'STRUCTURING'); ]]>
@@ -161,7 +161,7 @@
 
     </changeSet>
     <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0014"/>
+        <ext:tagDatabase tag="1.0.0-02.0014"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_resource_context AS enum ('internal', 'external'); ]]>
@@ -173,10 +173,10 @@
 
     </changeSet>
     <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0015"/>
+        <ext:tagDatabase tag="1.0.0-02.0015"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_rule_version_stage AS enum ('simulating', 'verifying', 'failed', 'ready_to_publish', 'published', 'initial'); ]]>
+            <![CDATA[ CREATE TYPE t_rule_version_stage AS enum ('verifying', 'failed', 'ready_to_publish', 'published', 'initial', 'simulating'); ]]>
         </sql>
 
         <rollback>
@@ -185,10 +185,10 @@
 
     </changeSet>
     <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0016"/>
+        <ext:tagDatabase tag="1.0.0-02.0016"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_rule_version_status AS enum ('archived', 'published', 'draft', 'stopped', 'stoped'); ]]>
+            <![CDATA[ CREATE TYPE t_rule_version_status AS enum ('draft', 'published', 'archived', 'stoped', 'stopped'); ]]>
         </sql>
 
         <rollback>
@@ -197,10 +197,10 @@
 
     </changeSet>
     <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0017"/>
+        <ext:tagDatabase tag="1.0.0-02.0017"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_simulation_status AS enum ('OK', 'NOK', 'RUNNING'); ]]>
+            <![CDATA[ CREATE TYPE t_simulation_status AS enum ('OK', 'RUNNING', 'NOK'); ]]>
         </sql>
 
         <rollback>
@@ -209,7 +209,7 @@
 
     </changeSet>
     <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0018"/>
+        <ext:tagDatabase tag="1.0.0-02.0018"/>
 
         <sql>
             <![CDATA[ CREATE TYPE t_checklist_resource AS enum ('case', 'alert'); ]]>
@@ -221,10 +221,10 @@
 
     </changeSet>
     <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-01.0019"/>
+        <ext:tagDatabase tag="1.0.0-02.0019"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_checklist_status AS enum ('stopped', 'archived', 'published', 'draft'); ]]>
+            <![CDATA[ CREATE TYPE t_checklist_status AS enum ('archived', 'stopped', 'draft', 'published'); ]]>
         </sql>
 
         <rollback>

@@ -13,7 +13,7 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-10.0001"/>
+        <ext:tagDatabase tag="1.0.0-07.0001"/>
     </changeSet>
 
 </databaseChangeLog>

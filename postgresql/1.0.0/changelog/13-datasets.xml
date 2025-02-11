@@ -13,11 +13,11 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-12.0001"/>
+        <ext:tagDatabase tag="1.0.0-13.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-12.0002"/>
+        <ext:tagDatabase tag="1.0.0-13.0002"/>
 
         <sqlFile
             encoding="UTF-8"
@@ -34,7 +34,7 @@
     </changeSet>
 
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-12.0003"/>
+        <ext:tagDatabase tag="1.0.0-13.0003"/>
 
         <sqlFile
             encoding="UTF-8"

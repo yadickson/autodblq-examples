@@ -13,11 +13,11 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0001"/>
+        <ext:tagDatabase tag="1.0.0-09.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0002"/>
+        <ext:tagDatabase tag="1.0.0-09.0002"/>
 
         <addForeignKeyConstraint
             constraintName="actions_entity_id_fkey"
@@ -39,7 +39,7 @@
     </changeSet>
 
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0003"/>
+        <ext:tagDatabase tag="1.0.0-09.0003"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_entity_id_fkey"
@@ -61,7 +61,7 @@
     </changeSet>
 
     <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0004"/>
+        <ext:tagDatabase tag="1.0.0-09.0004"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_execute_id_fkey"
@@ -83,7 +83,7 @@
     </changeSet>
 
     <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0005"/>
+        <ext:tagDatabase tag="1.0.0-09.0005"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_rule_id_fkey"
@@ -105,7 +105,7 @@
     </changeSet>
 
     <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0006"/>
+        <ext:tagDatabase tag="1.0.0-09.0006"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_spec_id_fkey"
@@ -127,7 +127,7 @@
     </changeSet>
 
     <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0007"/>
+        <ext:tagDatabase tag="1.0.0-09.0007"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_transaction_id_fkey"
@@ -149,7 +149,7 @@
     </changeSet>
 
     <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0008"/>
+        <ext:tagDatabase tag="1.0.0-09.0008"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_entity_id_fkey"
@@ -171,7 +171,7 @@
     </changeSet>
 
     <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0009"/>
+        <ext:tagDatabase tag="1.0.0-09.0009"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_execute_id_fkey"
@@ -193,7 +193,7 @@
     </changeSet>
 
     <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0010"/>
+        <ext:tagDatabase tag="1.0.0-09.0010"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_rule_id_fkey"
@@ -215,7 +215,7 @@
     </changeSet>
 
     <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0011"/>
+        <ext:tagDatabase tag="1.0.0-09.0011"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_spec_id_fkey"
@@ -237,7 +237,7 @@
     </changeSet>
 
     <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0012"/>
+        <ext:tagDatabase tag="1.0.0-09.0012"/>
 
         <addForeignKeyConstraint
             constraintName="alerts_transaction_id_fkey"
@@ -259,7 +259,7 @@
     </changeSet>
 
     <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0013"/>
+        <ext:tagDatabase tag="1.0.0-09.0013"/>
 
         <addForeignKeyConstraint
             constraintName="documents_document_type_id_fkey"
@@ -281,7 +281,7 @@
     </changeSet>
 
     <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0014"/>
+        <ext:tagDatabase tag="1.0.0-09.0014"/>
 
         <addForeignKeyConstraint
             constraintName="execution_rules_execution_id_fkey"
@@ -303,7 +303,7 @@
     </changeSet>
 
     <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0015"/>
+        <ext:tagDatabase tag="1.0.0-09.0015"/>
 
         <addForeignKeyConstraint
             constraintName="execution_rules_rule_id_fkey"
@@ -325,7 +325,7 @@
     </changeSet>
 
     <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0016"/>
+        <ext:tagDatabase tag="1.0.0-09.0016"/>
 
         <addForeignKeyConstraint
             constraintName="execution_rules_spec_id_fkey"
@@ -347,7 +347,7 @@
     </changeSet>
 
     <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0017"/>
+        <ext:tagDatabase tag="1.0.0-09.0017"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_r_entity_id_fkey"
@@ -369,7 +369,7 @@
     </changeSet>
 
     <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0018"/>
+        <ext:tagDatabase tag="1.0.0-09.0018"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_r_instrument_id_fkey"
@@ -391,7 +391,7 @@
     </changeSet>
 
     <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0019"/>
+        <ext:tagDatabase tag="1.0.0-09.0019"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_s_entity_id_fkey"
@@ -413,7 +413,7 @@
     </changeSet>
 
     <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0020"/>
+        <ext:tagDatabase tag="1.0.0-09.0020"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_s_instrument_id_fkey"
@@ -435,7 +435,7 @@
     </changeSet>
 
     <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0021"/>
+        <ext:tagDatabase tag="1.0.0-09.0021"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_historic_r_entity_id_fkey"
@@ -457,7 +457,7 @@
     </changeSet>
 
     <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0022"/>
+        <ext:tagDatabase tag="1.0.0-09.0022"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_historic_r_instrument_id_fkey"
@@ -479,7 +479,7 @@
     </changeSet>
 
     <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0023"/>
+        <ext:tagDatabase tag="1.0.0-09.0023"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_historic_s_entity_id_fkey"
@@ -501,7 +501,7 @@
     </changeSet>
 
     <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0024"/>
+        <ext:tagDatabase tag="1.0.0-09.0024"/>
 
         <addForeignKeyConstraint
             constraintName="exploded_transactions_historic_s_instrument_id_fkey"
@@ -523,7 +523,7 @@
     </changeSet>
 
     <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0025"/>
+        <ext:tagDatabase tag="1.0.0-09.0025"/>
 
         <addForeignKeyConstraint
             constraintName="flagging_values_flagged_category_code_fkey"
@@ -545,7 +545,7 @@
     </changeSet>
 
     <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0026"/>
+        <ext:tagDatabase tag="1.0.0-09.0026"/>
 
         <addForeignKeyConstraint
             constraintName="instruments_entity_id_fkey"
@@ -567,7 +567,7 @@
     </changeSet>
 
     <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0027"/>
+        <ext:tagDatabase tag="1.0.0-09.0027"/>
 
         <addForeignKeyConstraint
             constraintName="checklist_alerts_fk"
@@ -589,7 +589,7 @@
     </changeSet>
 
     <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0028"/>
+        <ext:tagDatabase tag="1.0.0-09.0028"/>
 
         <addForeignKeyConstraint
             constraintName="investigation_checklist_group_investigation_checklist_fk"
@@ -611,7 +611,7 @@
     </changeSet>
 
     <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0029"/>
+        <ext:tagDatabase tag="1.0.0-09.0029"/>
 
         <addForeignKeyConstraint
             constraintName="investigation_checklist_item_group_fk"
@@ -633,7 +633,7 @@
     </changeSet>
 
     <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0030"/>
+        <ext:tagDatabase tag="1.0.0-09.0030"/>
 
         <addForeignKeyConstraint
             constraintName="product_statistics_entity_id_fkey"
@@ -655,7 +655,7 @@
     </changeSet>
 
     <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0031"/>
+        <ext:tagDatabase tag="1.0.0-09.0031"/>
 
         <addForeignKeyConstraint
             constraintName="rule_spec_simulations_rule_spec_id_fkey"
@@ -677,7 +677,7 @@
     </changeSet>
 
     <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0032"/>
+        <ext:tagDatabase tag="1.0.0-09.0032"/>
 
         <addForeignKeyConstraint
             constraintName="rule_contents_rule_id_fkey"
@@ -699,7 +699,7 @@
     </changeSet>
 
     <changeSet id="0033" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0033"/>
+        <ext:tagDatabase tag="1.0.0-09.0033"/>
 
         <addForeignKeyConstraint
             constraintName="rule_versions_rule_id_fkey"
@@ -721,7 +721,7 @@
     </changeSet>
 
     <changeSet id="0034" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0034"/>
+        <ext:tagDatabase tag="1.0.0-09.0034"/>
 
         <addForeignKeyConstraint
             constraintName="rule_versions_spec_id_fkey"
@@ -743,7 +743,7 @@
     </changeSet>
 
     <changeSet id="0035" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0035"/>
+        <ext:tagDatabase tag="1.0.0-09.0035"/>
 
         <addForeignKeyConstraint
             constraintName="rules_model_code_fkey"
@@ -765,7 +765,7 @@
     </changeSet>
 
     <changeSet id="0036" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-08.0036"/>
+        <ext:tagDatabase tag="1.0.0-09.0036"/>
 
         <addForeignKeyConstraint
             constraintName="checklist_structure_investigation_checklist_fk"

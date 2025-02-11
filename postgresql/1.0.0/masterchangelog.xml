@@ -13,16 +13,17 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <include file="changelog/00-properties.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/01-types.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/02-tables.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/03-check-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/04-default-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/05-index-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/06-unique-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/07-primary-key-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/08-foreign-key-constraints.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/09-views.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/10-functions.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/11-procedures.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/12-datasets.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/01-sequences.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/02-types.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/03-tables.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/04-check-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/05-default-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/06-index-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/07-unique-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/08-primary-key-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/09-foreign-key-constraints.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/10-views.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/11-functions.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/12-procedures.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/13-datasets.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

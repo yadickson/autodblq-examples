@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.0.3-SNAPSHOT -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0002"/>
+
+        <createSequence
+            sequenceName="alerts_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="alerts_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0003"/>
+
+        <createSequence
+            sequenceName="alerts_simulation_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="alerts_simulation_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0004"/>
+
+        <createSequence
+            sequenceName="audits_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="audits_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0005"/>
+
+        <createSequence
+            sequenceName="custom_fields_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="custom_fields_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0006"/>
+
+        <createSequence
+            sequenceName="documents_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="documents_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0007"/>
+
+        <createSequence
+            sequenceName="execution_rules_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="execution_rules_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0008"/>
+
+        <createSequence
+            sequenceName="executions_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="executions_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0009"/>
+
+        <createSequence
+            sequenceName="investigation_checklist_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="investigation_checklist_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0010"/>
+
+        <createSequence
+            sequenceName="rule_specs_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="rule_specs_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0011"/>
+
+        <createSequence
+            sequenceName="rule_versions_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="rule_versions_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0012"/>
+
+        <createSequence
+            sequenceName="rules_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="rules_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0013"/>
+
+        <createSequence
+            sequenceName="schemaversions_schemaversionsid_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="schemaversions_schemaversionsid_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0014"/>
+
+        <createSequence
+            sequenceName="transactions_statistics_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="transactions_statistics_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0015"/>
+
+        <createSequence
+            sequenceName="checklist_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="checklist_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0016"/>
+
+        <createSequence
+            sequenceName="checklist_structure_id_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="bigint"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="checklist_structure_id_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

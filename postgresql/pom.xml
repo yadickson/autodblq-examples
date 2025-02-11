@@ -82,6 +82,23 @@
                     <addIdentity>true</addIdentity>
                     <keepTypes>true</keepTypes>
                     <keepNames>true</keepNames>
+                    <sequences>
+                        <param>alerts_id_seq</param>
+                        <param>alerts_simulation_id_seq</param>
+                        <param>audits_id_seq</param>
+                        <param>custom_fields_id_seq</param>
+                        <param>documents_id_seq</param>
+                        <param>execution_rules_id_seq</param>
+                        <param>executions_id_seq</param>
+                        <param>investigation_checklist_id_seq</param>
+                        <param>rule_specs_id_seq</param>
+                        <param>rule_versions_id_seq</param>
+                        <param>rules_id_seq</param>
+                        <param>schemaversions_schemaversionsid_seq</param>
+                        <param>transactions_statistics_id_seq</param>
+                        <param>checklist_id_seq</param>
+                        <param>checklist_structure_id_seq</param>
+                    </sequences>
                     <types>
                         <param>is_fraud</param>
                         <param>t_accounting_entry_type</param>

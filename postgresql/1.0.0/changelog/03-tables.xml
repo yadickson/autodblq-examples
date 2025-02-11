@@ -13,11 +13,11 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0001"/>
+        <ext:tagDatabase tag="1.0.0-03.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0002"/>
+        <ext:tagDatabase tag="1.0.0-03.0002"/>
 
         <createTable tableName="actions" remarks="Actions associated with entities">
             <column name="id" type="varchar(100)" remarks="">
@@ -65,10 +65,10 @@
     </changeSet>
 
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0003"/>
+        <ext:tagDatabase tag="1.0.0-03.0003"/>
 
         <createTable tableName="alerts" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="registered_at" type="timestamp" remarks="">
@@ -152,10 +152,10 @@
     </changeSet>
 
     <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0004"/>
+        <ext:tagDatabase tag="1.0.0-03.0004"/>
 
         <createTable tableName="alerts_simulation" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="registered_at" type="timestamp" remarks="">
@@ -239,10 +239,10 @@
     </changeSet>
 
     <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0005"/>
+        <ext:tagDatabase tag="1.0.0-03.0005"/>
 
         <createTable tableName="audits" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="registered_at" type="timestamp" remarks="">
@@ -266,7 +266,7 @@
     </changeSet>
 
     <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0006"/>
+        <ext:tagDatabase tag="1.0.0-03.0006"/>
 
         <createTable tableName="client_configs" remarks="">
             <column name="key" type="varchar(100)" remarks="configuration key">
@@ -284,10 +284,10 @@
     </changeSet>
 
     <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0007"/>
+        <ext:tagDatabase tag="1.0.0-03.0007"/>
 
         <createTable tableName="custom_fields" remarks="custom fields associated with resources">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="resource_type" type="t_custom_field_resource" remarks="in order to group different types">
@@ -329,7 +329,7 @@
     </changeSet>
 
     <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0008"/>
+        <ext:tagDatabase tag="1.0.0-03.0008"/>
 
         <createTable tableName="document_types" remarks="SC registered document types">
             <column name="code" type="varchar(50)" remarks="key name">
@@ -353,10 +353,10 @@
     </changeSet>
 
     <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0009"/>
+        <ext:tagDatabase tag="1.0.0-03.0009"/>
 
         <createTable tableName="documents" remarks="List of related entity documents">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="registered_at" type="timestamp" remarks="registration date and time">
@@ -386,7 +386,7 @@
     </changeSet>
 
     <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0010"/>
+        <ext:tagDatabase tag="1.0.0-03.0010"/>
 
         <createTable tableName="entities" remarks="List of registered entities">
             <column name="id" type="varchar(50)" remarks="">
@@ -440,10 +440,10 @@
     </changeSet>
 
     <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0011"/>
+        <ext:tagDatabase tag="1.0.0-03.0011"/>
 
         <createTable tableName="execution_rules" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="execution_id" type="int8" remarks="">
@@ -467,10 +467,10 @@
     </changeSet>
 
     <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0012"/>
+        <ext:tagDatabase tag="1.0.0-03.0012"/>
 
         <createTable tableName="executions" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="started_at" type="timestamp" remarks="">
@@ -506,13 +506,9 @@
     </changeSet>
 
     <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0013"/>
+        <ext:tagDatabase tag="1.0.0-03.0013"/>
 
-        <createTable tableName="exploded_transactions" remarks="Processed transactions with extra information adjusted over a reduced period from total data range.
-
-* s_ prefix indicates sender fields
-* r_ prefix indicates receiver fields
-* c_ prefix indicates custom fields from business SC">
+        <createTable tableName="exploded_transactions" remarks="Processed transactions with extra information adjusted over a reduced period from total data range.  * s_ prefix indicates sender fields * r_ prefix indicates receiver fields * c_ prefix indicates custom fields from business SC">
             <column name="id" type="varchar(36)" remarks="client transaction identifier">
                 <constraints nullable="false"/>
             </column>
@@ -606,7 +602,7 @@
     </changeSet>
 
     <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0014"/>
+        <ext:tagDatabase tag="1.0.0-03.0014"/>
 
         <createTable tableName="exploded_transactions_historic" remarks="Processed historical transactions using same transactions_exploded table fields">
             <column name="id" type="varchar(36)" remarks="client transaction identifier">
@@ -702,7 +698,7 @@
     </changeSet>
 
     <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0015"/>
+        <ext:tagDatabase tag="1.0.0-03.0015"/>
 
         <createTable tableName="flagging_value_categories" remarks="list of categories of flagging values">
             <column name="code" type="varchar(30)" remarks="">
@@ -723,7 +719,7 @@
     </changeSet>
 
     <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0016"/>
+        <ext:tagDatabase tag="1.0.0-03.0016"/>
 
         <createTable tableName="flagging_values" remarks="list of flagging values in order to flag elements like entities or instruments">
             <column name="flagged_category_code" type="varchar(30)" remarks="">
@@ -741,7 +737,7 @@
     </changeSet>
 
     <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0017"/>
+        <ext:tagDatabase tag="1.0.0-03.0017"/>
 
         <createTable tableName="instruments" remarks="associated entity instruments or some auto registered instruments from transactions">
             <column name="id" type="varchar(20)" remarks="">
@@ -777,10 +773,10 @@
     </changeSet>
 
     <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0018"/>
+        <ext:tagDatabase tag="1.0.0-03.0018"/>
 
         <createTable tableName="investigation_checklist" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="id_resource_type" type="int8" remarks="">
@@ -813,7 +809,7 @@
     </changeSet>
 
     <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0019"/>
+        <ext:tagDatabase tag="1.0.0-03.0019"/>
 
         <createTable tableName="investigation_checklist_group" remarks="tabla para almacenar distintos grupos de un ivestigation checklist">
             <column name="id" type="int4" remarks="">
@@ -843,7 +839,7 @@
     </changeSet>
 
     <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0020"/>
+        <ext:tagDatabase tag="1.0.0-03.0020"/>
 
         <createTable tableName="investigation_checklist_item" remarks="tabla para almacenar distintos items pertenecientes a un grupo de un ivestigation checklist">
             <column name="id" type="int4" remarks="">
@@ -867,11 +863,11 @@
     </changeSet>
 
     <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0021"/>
+        <ext:tagDatabase tag="1.0.0-03.0021"/>
 
         <createTable tableName="models" remarks="Contains information from base models or used in alerts detection process">
             <column name="code" type="varchar(50)" remarks="common human readable identifier used to name the models">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="category" type="t_model_category" remarks="">
                 <constraints nullable="true"/>
@@ -900,7 +896,7 @@
     </changeSet>
 
     <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0022"/>
+        <ext:tagDatabase tag="1.0.0-03.0022"/>
 
         <createTable tableName="product_statistics" remarks="max amounts by entity according certain period over products">
             <column name="entity_id" type="varchar(20)" remarks="">
@@ -936,7 +932,7 @@
     </changeSet>
 
     <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0023"/>
+        <ext:tagDatabase tag="1.0.0-03.0023"/>
 
         <createTable tableName="rule_spec_executions" remarks="">
             <column name="alert_id" type="int8" remarks="">
@@ -954,7 +950,7 @@
     </changeSet>
 
     <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0024"/>
+        <ext:tagDatabase tag="1.0.0-03.0024"/>
 
         <createTable tableName="rule_spec_simulations" remarks="">
             <column name="id" type="int8" remarks="">
@@ -987,10 +983,10 @@
     </changeSet>
 
     <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0025"/>
+        <ext:tagDatabase tag="1.0.0-03.0025"/>
 
         <createTable tableName="rule_specs" remarks="Each change to the rule content is saved in order to trace the rule history.">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="rule_id" type="int8" remarks="">
@@ -1020,7 +1016,7 @@
     </changeSet>
 
     <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0026"/>
+        <ext:tagDatabase tag="1.0.0-03.0026"/>
 
         <createTable tableName="rule_versions" remarks="rule internal versioning model, all version has one related spec but some spec could not have any version">
             <column name="rule_id" type="int8" remarks="">
@@ -1047,7 +1043,7 @@
             <column name="updated_by" type="varchar(150)" remarks="">
                 <constraints nullable="false"/>
             </column>
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="stage" type="t_rule_version_stage" remarks="">
@@ -1062,10 +1058,10 @@
     </changeSet>
 
     <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0027"/>
+        <ext:tagDatabase tag="1.0.0-03.0027"/>
 
         <createTable tableName="rules" remarks="Models implementation parameters are transformed into rules in order to evaluate the model">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="title" type="varchar(100)" remarks="tiny text explaining the rule">
@@ -1104,10 +1100,10 @@
     </changeSet>
 
     <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0028"/>
+        <ext:tagDatabase tag="1.0.0-03.0028"/>
 
         <createTable tableName="schemaversions" remarks="">
-            <column name="schemaversionsid" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="schemaversionsid" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="scriptname" type="varchar(255)" remarks="">
@@ -1125,7 +1121,7 @@
     </changeSet>
 
     <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0029"/>
+        <ext:tagDatabase tag="1.0.0-03.0029"/>
 
         <createTable tableName="transactions" remarks="Transaction data registered as JSON object with all data not exploded">
             <column name="id" type="varchar(20)" remarks="common SC transaction system unique identification">
@@ -1221,10 +1217,10 @@
     </changeSet>
 
     <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0030"/>
+        <ext:tagDatabase tag="1.0.0-03.0030"/>
 
         <createTable tableName="transactions_statistics" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="entity_id" type="varchar(20)" remarks="">
@@ -1308,10 +1304,10 @@
     </changeSet>
 
     <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0031"/>
+        <ext:tagDatabase tag="1.0.0-03.0031"/>
 
         <createTable tableName="checklist" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="name" type="varchar" remarks="">
@@ -1335,10 +1331,10 @@
     </changeSet>
 
     <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-02.0032"/>
+        <ext:tagDatabase tag="1.0.0-03.0032"/>
 
         <createTable tableName="checklist_structure" remarks="">
-            <column name="id" type="int8" remarks="" autoIncrement="true" startWith="1" incrementBy="1" >
+            <column name="id" type="int8" remarks="">
                 <constraints nullable="false"/>
             </column>
             <column name="id_checklist" type="int4" remarks="">

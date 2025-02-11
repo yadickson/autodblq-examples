@@ -13,11 +13,11 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="0001" author="yadickson.soto" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0001"/>
+        <ext:tagDatabase tag="1.0.0-06.0001"/>
     </changeSet>
 
     <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0002"/>
+        <ext:tagDatabase tag="1.0.0-06.0002"/>
 
         <createIndex
             indexName="idx_alerts_registered_at"
@@ -38,7 +38,7 @@
     </changeSet>
 
     <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0003"/>
+        <ext:tagDatabase tag="1.0.0-06.0003"/>
 
         <createIndex
             indexName="idx_alerts_rule_id"
@@ -59,7 +59,7 @@
     </changeSet>
 
     <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0004"/>
+        <ext:tagDatabase tag="1.0.0-06.0004"/>
 
         <createIndex
             indexName="idx_alerts_spec_id"
@@ -80,7 +80,7 @@
     </changeSet>
 
     <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0005"/>
+        <ext:tagDatabase tag="1.0.0-06.0005"/>
 
         <createIndex
             indexName="idx_alerts_execution_id"
@@ -101,7 +101,7 @@
     </changeSet>
 
     <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0006"/>
+        <ext:tagDatabase tag="1.0.0-06.0006"/>
 
         <createIndex
             indexName="idx_alerts_detected_at"
@@ -122,7 +122,7 @@
     </changeSet>
 
     <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0007"/>
+        <ext:tagDatabase tag="1.0.0-06.0007"/>
 
         <createIndex
             indexName="idx_alerts_entity_id"
@@ -143,7 +143,7 @@
     </changeSet>
 
     <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0008"/>
+        <ext:tagDatabase tag="1.0.0-06.0008"/>
 
         <createIndex
             indexName="idx_alerts_exploded_transaction_id"
@@ -164,7 +164,7 @@
     </changeSet>
 
     <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0009"/>
+        <ext:tagDatabase tag="1.0.0-06.0009"/>
 
         <createIndex
             indexName="idx_alerts_fraud"
@@ -185,7 +185,7 @@
     </changeSet>
 
     <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0010"/>
+        <ext:tagDatabase tag="1.0.0-06.0010"/>
 
         <createIndex
             indexName="idx_alerts_assigned_to"
@@ -206,7 +206,7 @@
     </changeSet>
 
     <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0011"/>
+        <ext:tagDatabase tag="1.0.0-06.0011"/>
 
         <createIndex
             indexName="idx_alerts_deadline"
@@ -227,7 +227,7 @@
     </changeSet>
 
     <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0012"/>
+        <ext:tagDatabase tag="1.0.0-06.0012"/>
 
         <createIndex
             indexName="idx_alerts_state"
@@ -248,7 +248,7 @@
     </changeSet>
 
     <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0013"/>
+        <ext:tagDatabase tag="1.0.0-06.0013"/>
 
         <createIndex
             indexName="idx_alerts_title"
@@ -269,7 +269,7 @@
     </changeSet>
 
     <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0014"/>
+        <ext:tagDatabase tag="1.0.0-06.0014"/>
 
         <createIndex
             indexName="idx_alerts_deadline_date"
@@ -290,7 +290,7 @@
     </changeSet>
 
     <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0015"/>
+        <ext:tagDatabase tag="1.0.0-06.0015"/>
 
         <createIndex
             indexName="idx_alerts_simulation_registered_at"
@@ -311,7 +311,7 @@
     </changeSet>
 
     <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0016"/>
+        <ext:tagDatabase tag="1.0.0-06.0016"/>
 
         <createIndex
             indexName="idx_alerts_simulation_rule_id"
@@ -332,7 +332,7 @@
     </changeSet>
 
     <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0017"/>
+        <ext:tagDatabase tag="1.0.0-06.0017"/>
 
         <createIndex
             indexName="idx_alerts_simulation_spec_id"
@@ -353,7 +353,7 @@
     </changeSet>
 
     <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0018"/>
+        <ext:tagDatabase tag="1.0.0-06.0018"/>
 
         <createIndex
             indexName="idx_alerts_simulation_execution_id"
@@ -374,7 +374,7 @@
     </changeSet>
 
     <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0019"/>
+        <ext:tagDatabase tag="1.0.0-06.0019"/>
 
         <createIndex
             indexName="idx_alerts_simulation_detected_at"
@@ -395,7 +395,7 @@
     </changeSet>
 
     <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0020"/>
+        <ext:tagDatabase tag="1.0.0-06.0020"/>
 
         <createIndex
             indexName="idx_alerts_simulation_entity_id"
@@ -416,7 +416,7 @@
     </changeSet>
 
     <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0021"/>
+        <ext:tagDatabase tag="1.0.0-06.0021"/>
 
         <createIndex
             indexName="idx_alerts_simulation_exploded_transaction_id"
@@ -437,7 +437,7 @@
     </changeSet>
 
     <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0022"/>
+        <ext:tagDatabase tag="1.0.0-06.0022"/>
 
         <createIndex
             indexName="idx_alerts_simulation_fraud"
@@ -458,7 +458,7 @@
     </changeSet>
 
     <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0023"/>
+        <ext:tagDatabase tag="1.0.0-06.0023"/>
 
         <createIndex
             indexName="idx_alerts_simulation_assigned_to"
@@ -479,7 +479,7 @@
     </changeSet>
 
     <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0024"/>
+        <ext:tagDatabase tag="1.0.0-06.0024"/>
 
         <createIndex
             indexName="idx_alerts_simulation_deadline"
@@ -500,7 +500,7 @@
     </changeSet>
 
     <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0025"/>
+        <ext:tagDatabase tag="1.0.0-06.0025"/>
 
         <createIndex
             indexName="idx_alerts_simulation_state"
@@ -521,7 +521,7 @@
     </changeSet>
 
     <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0026"/>
+        <ext:tagDatabase tag="1.0.0-06.0026"/>
 
         <createIndex
             indexName="idx_alerts_simulation_title"
@@ -542,7 +542,7 @@
     </changeSet>
 
     <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0027"/>
+        <ext:tagDatabase tag="1.0.0-06.0027"/>
 
         <createIndex
             indexName="idx_alerts_simulation_deadline_date"
@@ -563,7 +563,7 @@
     </changeSet>
 
     <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0028"/>
+        <ext:tagDatabase tag="1.0.0-06.0028"/>
 
         <createIndex
             indexName="idx_audits_resource_type"
@@ -584,7 +584,7 @@
     </changeSet>
 
     <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0029"/>
+        <ext:tagDatabase tag="1.0.0-06.0029"/>
 
         <createIndex
             indexName="idx_audits_resource"
@@ -606,7 +606,7 @@
     </changeSet>
 
     <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0030"/>
+        <ext:tagDatabase tag="1.0.0-06.0030"/>
 
         <createIndex
             indexName="idx_documents_resource_type"
@@ -627,7 +627,7 @@
     </changeSet>
 
     <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0031"/>
+        <ext:tagDatabase tag="1.0.0-06.0031"/>
 
         <createIndex
             indexName="idx_documents_resource_id"
@@ -648,7 +648,7 @@
     </changeSet>
 
     <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0032"/>
+        <ext:tagDatabase tag="1.0.0-06.0032"/>
 
         <createIndex
             indexName="idx_documents_resource"
@@ -670,7 +670,7 @@
     </changeSet>
 
     <changeSet id="0033" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0033"/>
+        <ext:tagDatabase tag="1.0.0-06.0033"/>
 
         <createIndex
             indexName="idx_entities_registered_at"
@@ -691,7 +691,7 @@
     </changeSet>
 
     <changeSet id="0034" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0034"/>
+        <ext:tagDatabase tag="1.0.0-06.0034"/>
 
         <createIndex
             indexName="idx_entities_type"
@@ -712,7 +712,7 @@
     </changeSet>
 
     <changeSet id="0035" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0035"/>
+        <ext:tagDatabase tag="1.0.0-06.0035"/>
 
         <createIndex
             indexName="idx_entities_subtype"
@@ -733,7 +733,7 @@
     </changeSet>
 
     <changeSet id="0036" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0036"/>
+        <ext:tagDatabase tag="1.0.0-06.0036"/>
 
         <createIndex
             indexName="idx_entities_status"
@@ -754,7 +754,7 @@
     </changeSet>
 
     <changeSet id="0037" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0037"/>
+        <ext:tagDatabase tag="1.0.0-06.0037"/>
 
         <createIndex
             indexName="idx_entities_source"
@@ -775,7 +775,7 @@
     </changeSet>
 
     <changeSet id="0038" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0038"/>
+        <ext:tagDatabase tag="1.0.0-06.0038"/>
 
         <createIndex
             indexName="idx_entities_name"
@@ -796,7 +796,7 @@
     </changeSet>
 
     <changeSet id="0039" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0039"/>
+        <ext:tagDatabase tag="1.0.0-06.0039"/>
 
         <createIndex
             indexName="idx_entities_year_of_birth"
@@ -817,7 +817,7 @@
     </changeSet>
 
     <changeSet id="0040" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0040"/>
+        <ext:tagDatabase tag="1.0.0-06.0040"/>
 
         <createIndex
             indexName="idx_entities_month_of_birth"
@@ -838,7 +838,7 @@
     </changeSet>
 
     <changeSet id="0041" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0041"/>
+        <ext:tagDatabase tag="1.0.0-06.0041"/>
 
         <createIndex
             indexName="idx_entities_day_of_birth"
@@ -859,7 +859,7 @@
     </changeSet>
 
     <changeSet id="0042" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0042"/>
+        <ext:tagDatabase tag="1.0.0-06.0042"/>
 
         <createIndex
             indexName="idx_entities_gender"
@@ -880,7 +880,7 @@
     </changeSet>
 
     <changeSet id="0043" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0043"/>
+        <ext:tagDatabase tag="1.0.0-06.0043"/>
 
         <createIndex
             indexName="idx_entities_national_identification_number"
@@ -901,7 +901,7 @@
     </changeSet>
 
     <changeSet id="0044" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0044"/>
+        <ext:tagDatabase tag="1.0.0-06.0044"/>
 
         <createIndex
             indexName="idx_entities_birth_date"
@@ -922,7 +922,7 @@
     </changeSet>
 
     <changeSet id="0045" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0045"/>
+        <ext:tagDatabase tag="1.0.0-06.0045"/>
 
         <createIndex
             indexName="idx_execution_rules_execution_id"
@@ -943,7 +943,7 @@
     </changeSet>
 
     <changeSet id="0046" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0046"/>
+        <ext:tagDatabase tag="1.0.0-06.0046"/>
 
         <createIndex
             indexName="idx_execution_rules_rule_id"
@@ -964,7 +964,7 @@
     </changeSet>
 
     <changeSet id="0047" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0047"/>
+        <ext:tagDatabase tag="1.0.0-06.0047"/>
 
         <createIndex
             indexName="idx_execution_rules_spec_id"
@@ -985,7 +985,7 @@
     </changeSet>
 
     <changeSet id="0048" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0048"/>
+        <ext:tagDatabase tag="1.0.0-06.0048"/>
 
         <createIndex
             indexName="idx_execution_rules_resource"
@@ -1007,7 +1007,7 @@
     </changeSet>
 
     <changeSet id="0049" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0049"/>
+        <ext:tagDatabase tag="1.0.0-06.0049"/>
 
         <createIndex
             indexName="idx_alerts_exist"
@@ -1029,7 +1029,7 @@
     </changeSet>
 
     <changeSet id="0050" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0050"/>
+        <ext:tagDatabase tag="1.0.0-06.0050"/>
 
         <createIndex
             indexName="idx_exploded_transactions_subtype"
@@ -1050,7 +1050,7 @@
     </changeSet>
 
     <changeSet id="0051" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0051"/>
+        <ext:tagDatabase tag="1.0.0-06.0051"/>
 
         <createIndex
             indexName="idx_exploded_transactions_status"
@@ -1071,7 +1071,7 @@
     </changeSet>
 
     <changeSet id="0052" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0052"/>
+        <ext:tagDatabase tag="1.0.0-06.0052"/>
 
         <createIndex
             indexName="idx_exploded_transactions_executed_at"
@@ -1092,7 +1092,7 @@
     </changeSet>
 
     <changeSet id="0053" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0053"/>
+        <ext:tagDatabase tag="1.0.0-06.0053"/>
 
         <createIndex
             indexName="idx_exploded_transactions_address_geo"
@@ -1113,7 +1113,7 @@
     </changeSet>
 
     <changeSet id="0054" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0054"/>
+        <ext:tagDatabase tag="1.0.0-06.0054"/>
 
         <createIndex
             indexName="idx_exploded_transactions_address_ip"
@@ -1134,7 +1134,7 @@
     </changeSet>
 
     <changeSet id="0055" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0055"/>
+        <ext:tagDatabase tag="1.0.0-06.0055"/>
 
         <createIndex
             indexName="idx_exploded_transactions_address_country_code"
@@ -1155,7 +1155,7 @@
     </changeSet>
 
     <changeSet id="0056" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0056"/>
+        <ext:tagDatabase tag="1.0.0-06.0056"/>
 
         <createIndex
             indexName="idx_exploded_transactions_s_context"
@@ -1176,7 +1176,7 @@
     </changeSet>
 
     <changeSet id="0057" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0057"/>
+        <ext:tagDatabase tag="1.0.0-06.0057"/>
 
         <createIndex
             indexName="idx_exploded_transactions_s_entity_id"
@@ -1197,7 +1197,7 @@
     </changeSet>
 
     <changeSet id="0058" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0058"/>
+        <ext:tagDatabase tag="1.0.0-06.0058"/>
 
         <createIndex
             indexName="idx_exploded_transactions_s_instrument_id"
@@ -1218,7 +1218,7 @@
     </changeSet>
 
     <changeSet id="0059" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0059"/>
+        <ext:tagDatabase tag="1.0.0-06.0059"/>
 
         <createIndex
             indexName="idx_exploded_transactions_s_amount"
@@ -1239,7 +1239,7 @@
     </changeSet>
 
     <changeSet id="0060" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0060"/>
+        <ext:tagDatabase tag="1.0.0-06.0060"/>
 
         <createIndex
             indexName="idx_exploded_transactions_s_currency"
@@ -1260,7 +1260,7 @@
     </changeSet>
 
     <changeSet id="0061" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0061"/>
+        <ext:tagDatabase tag="1.0.0-06.0061"/>
 
         <createIndex
             indexName="idx_exploded_transactions_r_context"
@@ -1281,7 +1281,7 @@
     </changeSet>
 
     <changeSet id="0062" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0062"/>
+        <ext:tagDatabase tag="1.0.0-06.0062"/>
 
         <createIndex
             indexName="idx_exploded_transactions_r_entity_id"
@@ -1302,7 +1302,7 @@
     </changeSet>
 
     <changeSet id="0063" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0063"/>
+        <ext:tagDatabase tag="1.0.0-06.0063"/>
 
         <createIndex
             indexName="idx_exploded_transactions_r_instrument_id"
@@ -1323,7 +1323,7 @@
     </changeSet>
 
     <changeSet id="0064" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0064"/>
+        <ext:tagDatabase tag="1.0.0-06.0064"/>
 
         <createIndex
             indexName="idx_exploded_transactions_r_amount"
@@ -1344,7 +1344,7 @@
     </changeSet>
 
     <changeSet id="0065" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0065"/>
+        <ext:tagDatabase tag="1.0.0-06.0065"/>
 
         <createIndex
             indexName="idx_exploded_transactions_r_currency"
@@ -1365,7 +1365,7 @@
     </changeSet>
 
     <changeSet id="0066" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0066"/>
+        <ext:tagDatabase tag="1.0.0-06.0066"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_channel"
@@ -1386,7 +1386,7 @@
     </changeSet>
 
     <changeSet id="0067" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0067"/>
+        <ext:tagDatabase tag="1.0.0-06.0067"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_product"
@@ -1407,7 +1407,7 @@
     </changeSet>
 
     <changeSet id="0068" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0068"/>
+        <ext:tagDatabase tag="1.0.0-06.0068"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_code"
@@ -1428,7 +1428,7 @@
     </changeSet>
 
     <changeSet id="0069" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0069"/>
+        <ext:tagDatabase tag="1.0.0-06.0069"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_branch_code"
@@ -1449,7 +1449,7 @@
     </changeSet>
 
     <changeSet id="0070" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0070"/>
+        <ext:tagDatabase tag="1.0.0-06.0070"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_name"
@@ -1470,7 +1470,7 @@
     </changeSet>
 
     <changeSet id="0071" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0071"/>
+        <ext:tagDatabase tag="1.0.0-06.0071"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_bank_name"
@@ -1491,7 +1491,7 @@
     </changeSet>
 
     <changeSet id="0072" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0072"/>
+        <ext:tagDatabase tag="1.0.0-06.0072"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_bank_code"
@@ -1512,7 +1512,7 @@
     </changeSet>
 
     <changeSet id="0073" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0073"/>
+        <ext:tagDatabase tag="1.0.0-06.0073"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_message"
@@ -1533,7 +1533,7 @@
     </changeSet>
 
     <changeSet id="0074" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0074"/>
+        <ext:tagDatabase tag="1.0.0-06.0074"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_commerce_code"
@@ -1554,7 +1554,7 @@
     </changeSet>
 
     <changeSet id="0075" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0075"/>
+        <ext:tagDatabase tag="1.0.0-06.0075"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_trx_commerce_name"
@@ -1575,7 +1575,7 @@
     </changeSet>
 
     <changeSet id="0076" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0076"/>
+        <ext:tagDatabase tag="1.0.0-06.0076"/>
 
         <createIndex
             indexName="idx_exploded_transactions_c_cli_fan_acc"
@@ -1596,7 +1596,7 @@
     </changeSet>
 
     <changeSet id="0077" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0077"/>
+        <ext:tagDatabase tag="1.0.0-06.0077"/>
 
         <createIndex
             indexName="idx_exploded_transactions_calculate_statistics"
@@ -1620,7 +1620,7 @@
     </changeSet>
 
     <changeSet id="0078" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0078"/>
+        <ext:tagDatabase tag="1.0.0-06.0078"/>
 
         <createIndex
             indexName="idx_exploded_transactions_type"
@@ -1642,7 +1642,7 @@
     </changeSet>
 
     <changeSet id="0079" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0079"/>
+        <ext:tagDatabase tag="1.0.0-06.0079"/>
 
         <createIndex
             indexName="idx_exploded_transactions_statistics"
@@ -1667,7 +1667,7 @@
     </changeSet>
 
     <changeSet id="0080" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0080"/>
+        <ext:tagDatabase tag="1.0.0-06.0080"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_subtype"
@@ -1688,7 +1688,7 @@
     </changeSet>
 
     <changeSet id="0081" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0081"/>
+        <ext:tagDatabase tag="1.0.0-06.0081"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_status"
@@ -1709,7 +1709,7 @@
     </changeSet>
 
     <changeSet id="0082" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0082"/>
+        <ext:tagDatabase tag="1.0.0-06.0082"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_executed_at"
@@ -1730,7 +1730,7 @@
     </changeSet>
 
     <changeSet id="0083" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0083"/>
+        <ext:tagDatabase tag="1.0.0-06.0083"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_address_geo"
@@ -1751,7 +1751,7 @@
     </changeSet>
 
     <changeSet id="0084" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0084"/>
+        <ext:tagDatabase tag="1.0.0-06.0084"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_address_ip"
@@ -1772,7 +1772,7 @@
     </changeSet>
 
     <changeSet id="0085" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0085"/>
+        <ext:tagDatabase tag="1.0.0-06.0085"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_address_country_code"
@@ -1793,7 +1793,7 @@
     </changeSet>
 
     <changeSet id="0086" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0086"/>
+        <ext:tagDatabase tag="1.0.0-06.0086"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_s_context"
@@ -1814,7 +1814,7 @@
     </changeSet>
 
     <changeSet id="0087" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0087"/>
+        <ext:tagDatabase tag="1.0.0-06.0087"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_s_entity_id"
@@ -1835,7 +1835,7 @@
     </changeSet>
 
     <changeSet id="0088" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0088"/>
+        <ext:tagDatabase tag="1.0.0-06.0088"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_s_instrument_id"
@@ -1856,7 +1856,7 @@
     </changeSet>
 
     <changeSet id="0089" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0089"/>
+        <ext:tagDatabase tag="1.0.0-06.0089"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_s_amount"
@@ -1877,7 +1877,7 @@
     </changeSet>
 
     <changeSet id="0090" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0090"/>
+        <ext:tagDatabase tag="1.0.0-06.0090"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_s_currency"
@@ -1898,7 +1898,7 @@
     </changeSet>
 
     <changeSet id="0091" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0091"/>
+        <ext:tagDatabase tag="1.0.0-06.0091"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_r_context"
@@ -1919,7 +1919,7 @@
     </changeSet>
 
     <changeSet id="0092" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0092"/>
+        <ext:tagDatabase tag="1.0.0-06.0092"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_r_entity_id"
@@ -1940,7 +1940,7 @@
     </changeSet>
 
     <changeSet id="0093" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0093"/>
+        <ext:tagDatabase tag="1.0.0-06.0093"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_r_instrument_id"
@@ -1961,7 +1961,7 @@
     </changeSet>
 
     <changeSet id="0094" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0094"/>
+        <ext:tagDatabase tag="1.0.0-06.0094"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_r_amount"
@@ -1982,7 +1982,7 @@
     </changeSet>
 
     <changeSet id="0095" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0095"/>
+        <ext:tagDatabase tag="1.0.0-06.0095"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_r_currency"
@@ -2003,7 +2003,7 @@
     </changeSet>
 
     <changeSet id="0096" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0096"/>
+        <ext:tagDatabase tag="1.0.0-06.0096"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_channel"
@@ -2024,7 +2024,7 @@
     </changeSet>
 
     <changeSet id="0097" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0097"/>
+        <ext:tagDatabase tag="1.0.0-06.0097"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_product"
@@ -2045,7 +2045,7 @@
     </changeSet>
 
     <changeSet id="0098" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0098"/>
+        <ext:tagDatabase tag="1.0.0-06.0098"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_code"
@@ -2066,7 +2066,7 @@
     </changeSet>
 
     <changeSet id="0099" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0099"/>
+        <ext:tagDatabase tag="1.0.0-06.0099"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_branch_code"
@@ -2087,7 +2087,7 @@
     </changeSet>
 
     <changeSet id="0100" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0100"/>
+        <ext:tagDatabase tag="1.0.0-06.0100"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_name"
@@ -2108,7 +2108,7 @@
     </changeSet>
 
     <changeSet id="0101" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0101"/>
+        <ext:tagDatabase tag="1.0.0-06.0101"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_bank_name"
@@ -2129,7 +2129,7 @@
     </changeSet>
 
     <changeSet id="0102" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0102"/>
+        <ext:tagDatabase tag="1.0.0-06.0102"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_bank_code"
@@ -2150,7 +2150,7 @@
     </changeSet>
 
     <changeSet id="0103" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0103"/>
+        <ext:tagDatabase tag="1.0.0-06.0103"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_message"
@@ -2171,7 +2171,7 @@
     </changeSet>
 
     <changeSet id="0104" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0104"/>
+        <ext:tagDatabase tag="1.0.0-06.0104"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_commerce_code"
@@ -2192,7 +2192,7 @@
     </changeSet>
 
     <changeSet id="0105" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0105"/>
+        <ext:tagDatabase tag="1.0.0-06.0105"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_trx_commerce_name"
@@ -2213,7 +2213,7 @@
     </changeSet>
 
     <changeSet id="0106" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0106"/>
+        <ext:tagDatabase tag="1.0.0-06.0106"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_c_cli_fan_acc"
@@ -2234,7 +2234,7 @@
     </changeSet>
 
     <changeSet id="0107" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0107"/>
+        <ext:tagDatabase tag="1.0.0-06.0107"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_related_dormant"
@@ -2257,7 +2257,7 @@
     </changeSet>
 
     <changeSet id="0108" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0108"/>
+        <ext:tagDatabase tag="1.0.0-06.0108"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_related_newlyseen"
@@ -2280,7 +2280,7 @@
     </changeSet>
 
     <changeSet id="0109" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0109"/>
+        <ext:tagDatabase tag="1.0.0-06.0109"/>
 
         <createIndex
             indexName="idx_exploded_transactions_historic_statistics"
@@ -2305,7 +2305,7 @@
     </changeSet>
 
     <changeSet id="0110" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0110"/>
+        <ext:tagDatabase tag="1.0.0-06.0110"/>
 
         <createIndex
             indexName="idx_instruments_type"
@@ -2326,7 +2326,7 @@
     </changeSet>
 
     <changeSet id="0111" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0111"/>
+        <ext:tagDatabase tag="1.0.0-06.0111"/>
 
         <createIndex
             indexName="idx_instruments_registered_at"
@@ -2347,7 +2347,7 @@
     </changeSet>
 
     <changeSet id="0112" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0112"/>
+        <ext:tagDatabase tag="1.0.0-06.0112"/>
 
         <createIndex
             indexName="idx_instruments_subtype"
@@ -2368,7 +2368,7 @@
     </changeSet>
 
     <changeSet id="0113" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0113"/>
+        <ext:tagDatabase tag="1.0.0-06.0113"/>
 
         <createIndex
             indexName="idx_instruments_status"
@@ -2389,7 +2389,7 @@
     </changeSet>
 
     <changeSet id="0114" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0114"/>
+        <ext:tagDatabase tag="1.0.0-06.0114"/>
 
         <createIndex
             indexName="idx_instruments_entity_id"
@@ -2410,7 +2410,7 @@
     </changeSet>
 
     <changeSet id="0115" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0115"/>
+        <ext:tagDatabase tag="1.0.0-06.0115"/>
 
         <createIndex
             indexName="idx_instruments_source"
@@ -2431,7 +2431,7 @@
     </changeSet>
 
     <changeSet id="0116" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0116"/>
+        <ext:tagDatabase tag="1.0.0-06.0116"/>
 
         <createIndex
             indexName="idx_rule_specs_rule_id"
@@ -2452,7 +2452,7 @@
     </changeSet>
 
     <changeSet id="0117" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0117"/>
+        <ext:tagDatabase tag="1.0.0-06.0117"/>
 
         <createIndex
             indexName="idx_rule_specs_created_by"
@@ -2473,7 +2473,7 @@
     </changeSet>
 
     <changeSet id="0118" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0118"/>
+        <ext:tagDatabase tag="1.0.0-06.0118"/>
 
         <createIndex
             indexName="idx_rule_specs_created_at"
@@ -2494,7 +2494,7 @@
     </changeSet>
 
     <changeSet id="0119" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0119"/>
+        <ext:tagDatabase tag="1.0.0-06.0119"/>
 
         <createIndex
             indexName="idx_rule_specs_updated_by"
@@ -2515,7 +2515,7 @@
     </changeSet>
 
     <changeSet id="0120" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0120"/>
+        <ext:tagDatabase tag="1.0.0-06.0120"/>
 
         <createIndex
             indexName="idx_rule_specs_updated_at"
@@ -2536,7 +2536,7 @@
     </changeSet>
 
     <changeSet id="0121" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0121"/>
+        <ext:tagDatabase tag="1.0.0-06.0121"/>
 
         <createIndex
             indexName="idx_rule_versions_spec_id"
@@ -2557,7 +2557,7 @@
     </changeSet>
 
     <changeSet id="0122" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0122"/>
+        <ext:tagDatabase tag="1.0.0-06.0122"/>
 
         <createIndex
             indexName="idx_rule_versions_version"
@@ -2578,7 +2578,7 @@
     </changeSet>
 
     <changeSet id="0123" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0123"/>
+        <ext:tagDatabase tag="1.0.0-06.0123"/>
 
         <createIndex
             indexName="idx_rule_versions_status"
@@ -2599,7 +2599,7 @@
     </changeSet>
 
     <changeSet id="0124" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0124"/>
+        <ext:tagDatabase tag="1.0.0-06.0124"/>
 
         <createIndex
             indexName="idx_rule_versions_created_by"
@@ -2620,7 +2620,7 @@
     </changeSet>
 
     <changeSet id="0125" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0125"/>
+        <ext:tagDatabase tag="1.0.0-06.0125"/>
 
         <createIndex
             indexName="idx_rule_versions_created_at"
@@ -2641,7 +2641,7 @@
     </changeSet>
 
     <changeSet id="0126" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0126"/>
+        <ext:tagDatabase tag="1.0.0-06.0126"/>
 
         <createIndex
             indexName="idx_rule_versions_updated_at"
@@ -2662,7 +2662,7 @@
     </changeSet>
 
     <changeSet id="0127" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0127"/>
+        <ext:tagDatabase tag="1.0.0-06.0127"/>
 
         <createIndex
             indexName="idx_rule_versions_updated_by"
@@ -2683,7 +2683,7 @@
     </changeSet>
 
     <changeSet id="0128" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0128"/>
+        <ext:tagDatabase tag="1.0.0-06.0128"/>
 
         <createIndex
             indexName="idx_rule_versions_stage"
@@ -2704,7 +2704,7 @@
     </changeSet>
 
     <changeSet id="0129" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0129"/>
+        <ext:tagDatabase tag="1.0.0-06.0129"/>
 
         <createIndex
             indexName="idx_rule_versions_rule_id"
@@ -2725,7 +2725,7 @@
     </changeSet>
 
     <changeSet id="0130" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0130"/>
+        <ext:tagDatabase tag="1.0.0-06.0130"/>
 
         <createIndex
             indexName="idx_rules_title"
@@ -2746,7 +2746,7 @@
     </changeSet>
 
     <changeSet id="0131" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0131"/>
+        <ext:tagDatabase tag="1.0.0-06.0131"/>
 
         <createIndex
             indexName="idx_rules_description"
@@ -2767,7 +2767,7 @@
     </changeSet>
 
     <changeSet id="0132" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0132"/>
+        <ext:tagDatabase tag="1.0.0-06.0132"/>
 
         <createIndex
             indexName="idx_rules_created_by"
@@ -2788,7 +2788,7 @@
     </changeSet>
 
     <changeSet id="0133" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0133"/>
+        <ext:tagDatabase tag="1.0.0-06.0133"/>
 
         <createIndex
             indexName="idx_rules_created_at"
@@ -2809,7 +2809,7 @@
     </changeSet>
 
     <changeSet id="0134" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0134"/>
+        <ext:tagDatabase tag="1.0.0-06.0134"/>
 
         <createIndex
             indexName="idx_rules_model_code"
@@ -2830,7 +2830,7 @@
     </changeSet>
 
     <changeSet id="0135" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0135"/>
+        <ext:tagDatabase tag="1.0.0-06.0135"/>
 
         <createIndex
             indexName="idx_rules_updated_at"
@@ -2851,7 +2851,7 @@
     </changeSet>
 
     <changeSet id="0136" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0136"/>
+        <ext:tagDatabase tag="1.0.0-06.0136"/>
 
         <createIndex
             indexName="idx_rules_updated_by"
@@ -2872,7 +2872,7 @@
     </changeSet>
 
     <changeSet id="0137" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0137"/>
+        <ext:tagDatabase tag="1.0.0-06.0137"/>
 
         <createIndex
             indexName="idx_rules_enabled"
@@ -2893,7 +2893,7 @@
     </changeSet>
 
     <changeSet id="0138" author="yadickson.soto" dbms="postgresql" runOnChange="false">
-        <ext:tagDatabase tag="1.0.0-05.0138"/>
+        <ext:tagDatabase tag="1.0.0-06.0138"/>
 
         <createIndex
             indexName="idx_rules_published"
