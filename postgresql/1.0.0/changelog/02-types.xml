@@ -20,7 +20,7 @@
         <ext:tagDatabase tag="1.0.0-02.0002"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE is_fraud AS enum ('not_declared', 'is_fraud', 'not_is_fraud'); ]]>
+            <![CDATA[ CREATE TYPE is_fraud AS enum ('is_fraud', 'not_declared', 'not_is_fraud'); ]]>
         </sql>
 
         <rollback>
@@ -44,7 +44,7 @@
         <ext:tagDatabase tag="1.0.0-02.0004"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_alert_state AS enum ('opened', 'closed'); ]]>
+            <![CDATA[ CREATE TYPE t_alert_state AS enum ('closed', 'opened'); ]]>
         </sql>
 
         <rollback>
@@ -56,7 +56,7 @@
         <ext:tagDatabase tag="1.0.0-02.0005"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_custom_field_resource AS enum ('transactions', 'instruments', 'entities', 'RULE', 'identifier', 'rule', 'alert', 'ALERT', 'actions'); ]]>
+            <![CDATA[ CREATE TYPE t_custom_field_resource AS enum ('ALERT', 'RULE', 'actions', 'alert', 'entities', 'identifier', 'instruments', 'rule', 'transactions'); ]]>
         </sql>
 
         <rollback>
@@ -68,7 +68,7 @@
         <ext:tagDatabase tag="1.0.0-02.0006"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_custom_field_type AS enum ('number', 'date_and_time', 'nin', 'boolean', 'string', 'text', 'date_only', 'enumerated', 'identifier', 'is_fraud', 'decimal', 'integer'); ]]>
+            <![CDATA[ CREATE TYPE t_custom_field_type AS enum ('boolean', 'date_and_time', 'date_only', 'decimal', 'enumerated', 'identifier', 'integer', 'is_fraud', 'nin', 'number', 'string', 'text'); ]]>
         </sql>
 
         <rollback>
@@ -92,7 +92,7 @@
         <ext:tagDatabase tag="1.0.0-02.0008"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_entity_type AS enum ('person', 'company'); ]]>
+            <![CDATA[ CREATE TYPE t_entity_type AS enum ('company', 'person'); ]]>
         </sql>
 
         <rollback>
@@ -104,7 +104,7 @@
         <ext:tagDatabase tag="1.0.0-02.0009"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_execution_status AS enum ('running', 'stopped', 'created', 'ended'); ]]>
+            <![CDATA[ CREATE TYPE t_execution_status AS enum ('created', 'ended', 'running', 'stopped'); ]]>
         </sql>
 
         <rollback>
@@ -116,7 +116,7 @@
         <ext:tagDatabase tag="1.0.0-02.0010"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_execution_type AS enum ('simulation', 'validation', 'detection'); ]]>
+            <![CDATA[ CREATE TYPE t_execution_type AS enum ('detection', 'simulation', 'validation'); ]]>
         </sql>
 
         <rollback>
@@ -128,7 +128,7 @@
         <ext:tagDatabase tag="1.0.0-02.0011"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_gender AS enum ('not_declared', 'male', 'female'); ]]>
+            <![CDATA[ CREATE TYPE t_gender AS enum ('female', 'male', 'not_declared'); ]]>
         </sql>
 
         <rollback>
@@ -164,7 +164,7 @@
         <ext:tagDatabase tag="1.0.0-02.0014"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_resource_context AS enum ('internal', 'external'); ]]>
+            <![CDATA[ CREATE TYPE t_resource_context AS enum ('external', 'internal'); ]]>
         </sql>
 
         <rollback>
@@ -176,7 +176,7 @@
         <ext:tagDatabase tag="1.0.0-02.0015"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_rule_version_stage AS enum ('verifying', 'failed', 'ready_to_publish', 'published', 'initial', 'simulating'); ]]>
+            <![CDATA[ CREATE TYPE t_rule_version_stage AS enum ('failed', 'initial', 'published', 'ready_to_publish', 'simulating', 'verifying'); ]]>
         </sql>
 
         <rollback>
@@ -188,7 +188,7 @@
         <ext:tagDatabase tag="1.0.0-02.0016"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_rule_version_status AS enum ('draft', 'published', 'archived', 'stoped', 'stopped'); ]]>
+            <![CDATA[ CREATE TYPE t_rule_version_status AS enum ('archived', 'draft', 'published', 'stoped', 'stopped'); ]]>
         </sql>
 
         <rollback>
@@ -200,7 +200,7 @@
         <ext:tagDatabase tag="1.0.0-02.0017"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_simulation_status AS enum ('OK', 'RUNNING', 'NOK'); ]]>
+            <![CDATA[ CREATE TYPE t_simulation_status AS enum ('NOK', 'OK', 'RUNNING'); ]]>
         </sql>
 
         <rollback>
@@ -212,7 +212,7 @@
         <ext:tagDatabase tag="1.0.0-02.0018"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_checklist_resource AS enum ('case', 'alert'); ]]>
+            <![CDATA[ CREATE TYPE t_checklist_resource AS enum ('alert', 'case'); ]]>
         </sql>
 
         <rollback>
@@ -224,7 +224,7 @@
         <ext:tagDatabase tag="1.0.0-02.0019"/>
 
         <sql>
-            <![CDATA[ CREATE TYPE t_checklist_status AS enum ('archived', 'stopped', 'draft', 'published'); ]]>
+            <![CDATA[ CREATE TYPE t_checklist_status AS enum ('archived', 'draft', 'published', 'stopped'); ]]>
         </sql>
 
         <rollback>
