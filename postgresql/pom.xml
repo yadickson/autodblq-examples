@@ -50,6 +50,16 @@
                 <pass>sqluser.1234</pass>
             </properties>
         </profile>
+        <profile>
+            <id>remote</id>
+            <properties>
+                <host>186.103.210.141</host>
+                <port>4020</port>
+                <db>client_context</db>
+                <user>aiB2U</user>
+                <pass>aiB2U..#a</pass>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
@@ -58,7 +68,7 @@
             <plugin>
                 <groupId>com.github.yadickson</groupId>
                 <artifactId>autodblq</artifactId>
-                <version>2.1.0-SNAPSHOT</version>
+                <version>2.1.2-SNAPSHOT</version>
                 <configuration>
                     <driver>org.postgresql.Driver</driver>
                     <url>jdbc:postgresql://${host}:${port}/${db}</url>
@@ -67,6 +77,7 @@
                     <author>yadickson.soto</author>
                     <version>1.0.0</version>
                     <outputDirectory>.</outputDirectory>
+                    <outputDatasetBlockSize>1000</outputDatasetBlockSize>
                     <addDbms>true</addDbms>
                     <addNullable>true</addNullable>
                     <addIdentity>true</addIdentity>
@@ -151,8 +162,9 @@
                     <dataTables>
                         <param>models</param>
                         <param>custom_fields</param>
-<!--                        <param>entities</param>-->
-<!--                        <param>instruments</param>-->
+                        <param>entities</param>
+                        <param>instruments</param>
+<!--                        <param>exploded_transactions</param>-->
                     </dataTables>
                 </configuration>
                 <dependencies>
