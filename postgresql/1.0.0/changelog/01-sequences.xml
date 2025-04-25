@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.1.3 -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-01.0002"/>
+
+        <createSequence
+            sequenceName="schemaversions_schemaversionsid_seq"
+            startValue="1"
+            incrementBy="1"
+            dataType="integer"
+            cycle="false"
+        />
+
+        <rollback>
+            <dropSequence
+                sequenceName="schemaversions_schemaversionsid_seq"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

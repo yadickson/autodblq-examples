@@ -164,7 +164,7 @@
                         <param>custom_fields</param>
                         <param>entities</param>
                         <param>instruments</param>
-<!--                        <param>exploded_transactions</param>-->
+                        <param>exploded_transactions</param>
                     </dataTables>
                 </configuration>
                 <dependencies>

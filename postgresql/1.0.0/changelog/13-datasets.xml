@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.1.3 -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0002"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/models.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="models"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0003"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/custom_fields.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="custom_fields"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0004"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/document_types.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="document_types"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0005"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0001-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0006"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0002-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0007"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0003-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0008"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0004-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0009"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0005-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0010"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0006-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0011"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0007-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0012"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0008-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0013"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0009-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0014"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0010-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0015"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0011-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0016"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0012-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0017"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0013-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0018"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0014-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0019"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0015-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0020"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0016-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0021"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0017-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0022"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0018-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0023"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0019-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0024"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0020-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0025"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0021-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0026"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0022-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0027"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0023-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0028"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0024-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0029"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0025-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0030"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0026-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0031"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0027-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0032"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0028-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0033" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0033"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0029-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0034" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0034"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0030-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0035" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0035"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0031-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0036" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0036"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0032-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0037" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0037"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0033-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0038" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0038"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0034-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0039" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0039"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0035-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0040" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0040"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0036-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0041" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0041"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0037-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0042" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0042"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0038-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0043" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0043"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0039-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0044" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0044"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0040-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0045" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0045"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0041-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0046" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0046"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0042-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0047" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0047"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0043-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0048" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0048"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0044-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0049" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0049"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0045-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0050" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0050"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0046-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0051" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0051"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0047-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0052" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0052"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0048-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0053" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0053"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0049-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0054" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0054"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0050-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0055" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-13.0055"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../datasets/entities/0051-entities.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <delete tableName="entities"/>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

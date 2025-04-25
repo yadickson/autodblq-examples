@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.1.3 -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0002"/>
+
+        <addForeignKeyConstraint
+            constraintName="actions_entity_id_fkey"
+            baseTableName="actions"
+            baseColumnNames="entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="actions"
+                constraintName="actions_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0003"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_entity_id_fkey"
+            baseTableName="alerts"
+            baseColumnNames="entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts"
+                constraintName="alerts_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0004"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_execute_id_fkey"
+            baseTableName="alerts"
+            baseColumnNames="execution_id"
+            referencedTableName="executions"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts"
+                constraintName="alerts_execute_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0005"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_rule_id_fkey"
+            baseTableName="alerts"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts"
+                constraintName="alerts_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0006"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_spec_id_fkey"
+            baseTableName="alerts"
+            baseColumnNames="spec_id"
+            referencedTableName="rule_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts"
+                constraintName="alerts_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0007"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_transaction_id_fkey"
+            baseTableName="alerts"
+            baseColumnNames="exploded_transaction_id"
+            referencedTableName="exploded_transactions"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts"
+                constraintName="alerts_transaction_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0008"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_entity_id_fkey"
+            baseTableName="alerts_simulation"
+            baseColumnNames="entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts_simulation"
+                constraintName="alerts_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0009"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_execute_id_fkey"
+            baseTableName="alerts_simulation"
+            baseColumnNames="execution_id"
+            referencedTableName="executions"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts_simulation"
+                constraintName="alerts_execute_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0010"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_rule_id_fkey"
+            baseTableName="alerts_simulation"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts_simulation"
+                constraintName="alerts_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0011"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_spec_id_fkey"
+            baseTableName="alerts_simulation"
+            baseColumnNames="spec_id"
+            referencedTableName="rule_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts_simulation"
+                constraintName="alerts_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0012"/>
+
+        <addForeignKeyConstraint
+            constraintName="alerts_transaction_id_fkey"
+            baseTableName="alerts_simulation"
+            baseColumnNames="exploded_transaction_id"
+            referencedTableName="exploded_transactions"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="alerts_simulation"
+                constraintName="alerts_transaction_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0013"/>
+
+        <addForeignKeyConstraint
+            constraintName="checklist_specs_checklist_id_fkey"
+            baseTableName="checklist_specs"
+            baseColumnNames="checklist_id"
+            referencedTableName="checklist"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="checklist_specs"
+                constraintName="checklist_specs_checklist_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0014"/>
+
+        <addForeignKeyConstraint
+            constraintName="checklist_structure_investigation_checklist_fk"
+            baseTableName="checklist_structure"
+            baseColumnNames="id_checklist"
+            referencedTableName="checklist"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="checklist_structure"
+                constraintName="checklist_structure_investigation_checklist_fk"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0015" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0015"/>
+
+        <addForeignKeyConstraint
+            constraintName="checklist_versions_checklist_id_fkey"
+            baseTableName="checklist_versions"
+            baseColumnNames="checklist_id"
+            referencedTableName="checklist"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="checklist_versions"
+                constraintName="checklist_versions_checklist_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0016" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0016"/>
+
+        <addForeignKeyConstraint
+            constraintName="checklist_versions_spec_id_fkey"
+            baseTableName="checklist_versions"
+            baseColumnNames="checklist_spec_id"
+            referencedTableName="checklist_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="checklist_versions"
+                constraintName="checklist_versions_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0017" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0017"/>
+
+        <addForeignKeyConstraint
+            constraintName="documents_document_type_id_fkey"
+            baseTableName="documents"
+            baseColumnNames="document_type_id"
+            referencedTableName="document_types"
+            referencedColumnNames="code"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="documents"
+                constraintName="documents_document_type_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0018" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0018"/>
+
+        <addForeignKeyConstraint
+            constraintName="execution_rules_execution_id_fkey"
+            baseTableName="execution_rules"
+            baseColumnNames="execution_id"
+            referencedTableName="executions"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="execution_rules"
+                constraintName="execution_rules_execution_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0019" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0019"/>
+
+        <addForeignKeyConstraint
+            constraintName="execution_rules_rule_id_fkey"
+            baseTableName="execution_rules"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="execution_rules"
+                constraintName="execution_rules_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0020" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0020"/>
+
+        <addForeignKeyConstraint
+            constraintName="execution_rules_spec_id_fkey"
+            baseTableName="execution_rules"
+            baseColumnNames="spec_id"
+            referencedTableName="rule_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="execution_rules"
+                constraintName="execution_rules_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0021" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0021"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_r_entity_id_fkey"
+            baseTableName="exploded_transactions"
+            baseColumnNames="r_entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions"
+                constraintName="exploded_transactions_r_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0022" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0022"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_r_instrument_id_fkey"
+            baseTableName="exploded_transactions"
+            baseColumnNames="r_instrument_id"
+            referencedTableName="instruments"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions"
+                constraintName="exploded_transactions_r_instrument_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0023" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0023"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_s_entity_id_fkey"
+            baseTableName="exploded_transactions"
+            baseColumnNames="s_entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions"
+                constraintName="exploded_transactions_s_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0024" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0024"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_s_instrument_id_fkey"
+            baseTableName="exploded_transactions"
+            baseColumnNames="s_instrument_id"
+            referencedTableName="instruments"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions"
+                constraintName="exploded_transactions_s_instrument_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0025" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0025"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_historic_r_entity_id_fkey"
+            baseTableName="exploded_transactions_historic"
+            baseColumnNames="r_entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions_historic"
+                constraintName="exploded_transactions_historic_r_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0026" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0026"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_historic_r_instrument_id_fkey"
+            baseTableName="exploded_transactions_historic"
+            baseColumnNames="r_instrument_id"
+            referencedTableName="instruments"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions_historic"
+                constraintName="exploded_transactions_historic_r_instrument_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0027" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0027"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_historic_s_entity_id_fkey"
+            baseTableName="exploded_transactions_historic"
+            baseColumnNames="s_entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions_historic"
+                constraintName="exploded_transactions_historic_s_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0028" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0028"/>
+
+        <addForeignKeyConstraint
+            constraintName="exploded_transactions_historic_s_instrument_id_fkey"
+            baseTableName="exploded_transactions_historic"
+            baseColumnNames="s_instrument_id"
+            referencedTableName="instruments"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="exploded_transactions_historic"
+                constraintName="exploded_transactions_historic_s_instrument_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0029" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0029"/>
+
+        <addForeignKeyConstraint
+            constraintName="flagging_values_flagged_category_code_fkey"
+            baseTableName="flagging_values"
+            baseColumnNames="flagged_category_code"
+            referencedTableName="flagging_value_categories"
+            referencedColumnNames="code"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="flagging_values"
+                constraintName="flagging_values_flagged_category_code_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0030" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0030"/>
+
+        <addForeignKeyConstraint
+            constraintName="instruments_entity_id_fkey"
+            baseTableName="instruments"
+            baseColumnNames="entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="instruments"
+                constraintName="instruments_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0031" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0031"/>
+
+        <addForeignKeyConstraint
+            constraintName="product_statistics_entity_id_fkey"
+            baseTableName="product_statistics"
+            baseColumnNames="entity_id"
+            referencedTableName="entities"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="product_statistics"
+                constraintName="product_statistics_entity_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0032" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0032"/>
+
+        <addForeignKeyConstraint
+            constraintName="queue_rule_queue_id_fkey"
+            baseTableName="queue_rule"
+            baseColumnNames="queue_id"
+            referencedTableName="queue"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="queue_rule"
+                constraintName="queue_rule_queue_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0033" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0033"/>
+
+        <addForeignKeyConstraint
+            constraintName="queue_rule_rule_id_fkey"
+            baseTableName="queue_rule"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="queue_rule"
+                constraintName="queue_rule_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0034" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0034"/>
+
+        <addForeignKeyConstraint
+            constraintName="queue_checklist_checklist_id_fkey"
+            baseTableName="queue_checklist"
+            baseColumnNames="checklist_id"
+            referencedTableName="checklist"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="queue_checklist"
+                constraintName="queue_checklist_checklist_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0035" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0035"/>
+
+        <addForeignKeyConstraint
+            constraintName="queue_checklist_queue_id_fkey"
+            baseTableName="queue_checklist"
+            baseColumnNames="queue_id"
+            referencedTableName="queue"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="queue_checklist"
+                constraintName="queue_checklist_queue_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0036" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0036"/>
+
+        <addForeignKeyConstraint
+            constraintName="rule_spec_simulations_rule_spec_id_fkey"
+            baseTableName="rule_spec_simulations"
+            baseColumnNames="rule_spec_id"
+            referencedTableName="rule_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="rule_spec_simulations"
+                constraintName="rule_spec_simulations_rule_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0037" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0037"/>
+
+        <addForeignKeyConstraint
+            constraintName="rule_contents_rule_id_fkey"
+            baseTableName="rule_specs"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="rule_specs"
+                constraintName="rule_contents_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0038" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0038"/>
+
+        <addForeignKeyConstraint
+            constraintName="rule_versions_rule_id_fkey"
+            baseTableName="rule_versions"
+            baseColumnNames="rule_id"
+            referencedTableName="rules"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="rule_versions"
+                constraintName="rule_versions_rule_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0039" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0039"/>
+
+        <addForeignKeyConstraint
+            constraintName="rule_versions_spec_id_fkey"
+            baseTableName="rule_versions"
+            baseColumnNames="spec_id"
+            referencedTableName="rule_specs"
+            referencedColumnNames="id"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="rule_versions"
+                constraintName="rule_versions_spec_id_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0040" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-09.0040"/>
+
+        <addForeignKeyConstraint
+            constraintName="rules_model_code_fkey"
+            baseTableName="rules"
+            baseColumnNames="model_code"
+            referencedTableName="models"
+            referencedColumnNames="code"
+            onDelete="NO ACTION"
+            onUpdate="NO ACTION"
+        />
+
+        <rollback>
+            <dropForeignKeyConstraint
+                baseTableName="rules"
+                constraintName="rules_model_code_fkey"
+            />
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>

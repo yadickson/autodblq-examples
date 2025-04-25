@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Maven Auto Database to Liquibase Generator Plugin -->
+<!-- 2.1.3 -->
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="0001" author="yadickson.soto" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0001"/>
+    </changeSet>
+
+    <changeSet id="0002" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0002"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/alerts_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "alerts_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0003" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0003"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/cases_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "cases_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0004" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0004"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/combined_transactions.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "combined_transactions" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0005" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0005"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/entity_alerts_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "entity_alerts_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0006" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0006"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/entity_transactions_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "entity_transactions_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0007" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0007"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/exploded_transactions_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "exploded_transactions_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0008" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0008"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/get_queue_checklist_rule_publish.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "get_queue_checklist_rule_publish" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0009" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0009"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/get_rule_published.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "get_rule_published" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0010" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0010"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/instruments_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "instruments_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0011" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0011"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/pg_stat_statements.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "pg_stat_statements" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0012" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0012"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/pg_stat_statements_info.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "pg_stat_statements_info" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0013" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0013"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/rule_search.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "rule_search" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="0014" author="yadickson.soto" dbms="postgresql" runOnChange="false">
+        <ext:tagDatabase tag="1.0.0-10.0014"/>
+
+        <sqlFile
+            encoding="UTF-8"
+            path="../views/transactions_statistics_view.sql"
+            relativeToChangelogFile="true"
+            splitStatements="false"
+            stripComments="true"
+        />
+
+        <rollback>
+            <sql><![CDATA[ DROP VIEW "transactions_statistics_view" ]]></sql>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>
