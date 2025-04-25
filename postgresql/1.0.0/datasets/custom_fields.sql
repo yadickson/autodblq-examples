@@ -132,4 +132,5 @@ values
   (136, 'case'::t_custom_field_resource, 'end_date', '2024-11-26 11:09:51.776176', 'end_date', 'date_and_time'::t_custom_field_type, 'end_date_des', true, 'me', NULL, NULL),
   (137, 'case'::t_custom_field_resource, 'pending_date', '2024-11-26 11:09:51.776176', 'pending_date', 'date_and_time'::t_custom_field_type, 'pending_date_des', true, 'me', NULL, NULL),
   (138, 'case'::t_custom_field_resource, 'classified_at', '2024-11-26 11:09:51.776176', 'classified_at', 'date_and_time'::t_custom_field_type, 'classified_at_des', true, 'me', NULL, NULL),
-  (139, 'case'::t_custom_field_resource, 'classified_by', '2024-11-20 12:16:21.754059', 'classified_by', 'text'::t_custom_field_type, 'classified_by_des', true, 'me', NULL, NULL);
+  (139, 'case'::t_custom_field_resource, 'classified_by', '2024-11-20 12:16:21.754059', 'classified_by', 'text'::t_custom_field_type, 'classified_by_des', true, 'me', NULL, NULL),
+  (140, 'alert'::t_custom_field_resource, 'type', '2024-11-28 10:03:15.757186', 'type', 'enumerated'::t_custom_field_type, 'type_des', true, 'me', 'automatic,manual', NULL);
